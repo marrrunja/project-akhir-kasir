@@ -28,5 +28,10 @@ namespace project_akhir_kasir
         {
             Helper.redirectTo(this, new ManageBarang());
         }
+
+        private void HistoryBtn_Click(object sender, EventArgs e)
+        {
+            Helper.redirectTo(this, new History());
+        }
     }
 }

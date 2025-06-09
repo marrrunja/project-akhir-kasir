@@ -36,17 +36,17 @@
             btnCari = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -140,6 +140,48 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Detail Transaksi";
             // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(250, 323);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(245, 39);
+            textBox6.TabIndex = 35;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(250, 268);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(245, 39);
+            textBox5.TabIndex = 34;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(250, 215);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(245, 39);
+            textBox4.TabIndex = 33;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(250, 160);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(245, 39);
+            textBox3.TabIndex = 32;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(250, 108);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(245, 39);
+            textBox2.TabIndex = 31;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(250, 54);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(245, 39);
+            textBox1.TabIndex = 19;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -185,54 +227,6 @@
             label2.TabIndex = 26;
             label2.Text = "Nama Barang";
             label2.Click += label2_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(250, 54);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(245, 39);
-            textBox1.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(250, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(245, 39);
-            textBox2.TabIndex = 31;
-            // 
-            // textBox3
-            // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(250, 160);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(245, 39);
-            textBox3.TabIndex = 32;
-            // 
-            // textBox4
-            // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(250, 215);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(245, 39);
-            textBox4.TabIndex = 33;
-            // 
-            // textBox5
-            // 
-            textBox5.Enabled = false;
-            textBox5.Location = new Point(250, 268);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(245, 39);
-            textBox5.TabIndex = 34;
-            // 
-            // textBox6
-            // 
-            textBox6.Enabled = false;
-            textBox6.Location = new Point(250, 323);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(245, 39);
-            textBox6.TabIndex = 35;
             // 
             // History
             // 
