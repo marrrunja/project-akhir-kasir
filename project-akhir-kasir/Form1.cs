@@ -55,9 +55,9 @@ namespace project_akhir_kasir
             }
             if (HandeLogin(username, password))
             {
-                Kasir ksr = new Kasir();
+                MainMenu mainMenu = new MainMenu();
                 this.Hide();
-                ksr.Show();
+                mainMenu.Show();
             }
         }
     }

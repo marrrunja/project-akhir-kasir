@@ -59,7 +59,6 @@
             button3.TabIndex = 2;
             button3.Text = "##";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += this.button3_Click;
             // 
             // MainMenu
             // 
@@ -71,7 +70,6 @@
             Controls.Add(KasirBtn);
             Name = "MainMenu";
             Text = "Menu Utama";
-            Load += this.MainMenu_Load;
             ResumeLayout(false);
         }
 
