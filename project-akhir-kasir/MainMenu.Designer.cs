@@ -36,7 +36,7 @@
             // KasirBtn
             // 
             KasirBtn.Location = new Point(150, 176);
-            KasirBtn.Margin = new Padding(2, 2, 2, 2);
+            KasirBtn.Margin = new Padding(2);
             KasirBtn.Name = "KasirBtn";
             KasirBtn.Size = new Size(238, 100);
             KasirBtn.TabIndex = 0;
@@ -47,17 +47,18 @@
             // ManageBarangBtn
             // 
             ManageBarangBtn.Location = new Point(445, 176);
-            ManageBarangBtn.Margin = new Padding(2, 2, 2, 2);
+            ManageBarangBtn.Margin = new Padding(2);
             ManageBarangBtn.Name = "ManageBarangBtn";
             ManageBarangBtn.Size = new Size(238, 100);
             ManageBarangBtn.TabIndex = 1;
             ManageBarangBtn.Text = "Manage Barang";
             ManageBarangBtn.UseVisualStyleBackColor = true;
+            ManageBarangBtn.Click += ManageBarangBtn_Click;
             // 
             // button3
             // 
             button3.Location = new Point(734, 176);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(238, 100);
             button3.TabIndex = 2;
@@ -72,7 +73,7 @@
             Controls.Add(button3);
             Controls.Add(ManageBarangBtn);
             Controls.Add(KasirBtn);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "MainMenu";
             Text = "Menu Utama";
             ResumeLayout(false);

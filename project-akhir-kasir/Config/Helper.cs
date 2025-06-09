@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project_akhir_kasir.Config
 {
-    public static class Helper
+    public class Helper
     {
         public static void backToHome(Object obj)
         {
