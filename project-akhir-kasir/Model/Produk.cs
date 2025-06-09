@@ -59,6 +59,28 @@ namespace project_akhir_kasir.Model
             }
         }
 
-        
+        public static DataTable getAllData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM products";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+               
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Gagal mengambil data " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return new DataTable();
+;
+                }
+            }
+        }
+
     }
 }
