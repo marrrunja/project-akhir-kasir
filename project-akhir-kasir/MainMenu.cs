@@ -23,5 +23,16 @@ namespace project_akhir_kasir
             FormKasir kasir = new FormKasir();
             Helper.redirectTo(this, kasir);
         }
+
+        private void HistoryBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ManageBarangBtn_Click(object sender, EventArgs e)
+        {
+            ManageBarang manageBarang = new ManageBarang();
+            Helper.redirectTo(this, manageBarang);
+        }
     }
 }
