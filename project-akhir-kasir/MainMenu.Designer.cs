@@ -35,43 +35,46 @@
             // 
             // KasirBtn
             // 
-            KasirBtn.Location = new Point(195, 225);
+            KasirBtn.Location = new Point(150, 176);
+            KasirBtn.Margin = new Padding(2, 2, 2, 2);
             KasirBtn.Name = "KasirBtn";
-            KasirBtn.Size = new Size(310, 128);
+            KasirBtn.Size = new Size(238, 100);
             KasirBtn.TabIndex = 0;
             KasirBtn.Text = "Kasir";
             KasirBtn.UseVisualStyleBackColor = true;
+            KasirBtn.Click += KasirBtn_Click;
             // 
             // ManageBarangBtn
             // 
-            ManageBarangBtn.Location = new Point(578, 225);
+            ManageBarangBtn.Location = new Point(445, 176);
+            ManageBarangBtn.Margin = new Padding(2, 2, 2, 2);
             ManageBarangBtn.Name = "ManageBarangBtn";
-            ManageBarangBtn.Size = new Size(310, 128);
+            ManageBarangBtn.Size = new Size(238, 100);
             ManageBarangBtn.TabIndex = 1;
             ManageBarangBtn.Text = "Manage Barang";
             ManageBarangBtn.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(954, 225);
+            button3.Location = new Point(734, 176);
+            button3.Margin = new Padding(2, 2, 2, 2);
             button3.Name = "button3";
-            button3.Size = new Size(310, 128);
+            button3.Size = new Size(238, 100);
             button3.TabIndex = 2;
             button3.Text = "##";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += this.button3_Click;
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1466, 819);
+            ClientSize = new Size(1128, 640);
             Controls.Add(button3);
             Controls.Add(ManageBarangBtn);
             Controls.Add(KasirBtn);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "MainMenu";
             Text = "Menu Utama";
-            Load += this.MainMenu_Load;
             ResumeLayout(false);
         }
 

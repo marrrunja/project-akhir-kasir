@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_akhir_kasir.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,5 +23,9 @@ namespace project_akhir_kasir
 
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Helper.backToHome(this);
+        }
     }
 }

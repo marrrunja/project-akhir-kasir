@@ -7,6 +7,8 @@ namespace project_akhir_kasir
         public Form1()
         {
             InitializeComponent();
+            textboxUsername.Text = "muammar";
+            textboxPassword.Text = "123";
         }
 
         private bool HandeLogin(string username, string password)
@@ -48,6 +50,8 @@ namespace project_akhir_kasir
             string username = textboxUsername.Text;
             string password = textboxPassword.Text;
 
+           
+
             if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Username atau password tidak boleh kosong ", "Validasi",MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -55,9 +59,9 @@ namespace project_akhir_kasir
             }
             if (HandeLogin(username, password))
             {
-                Kasir ksr = new Kasir();
+                MainMenu mainMenu = new MainMenu();
                 this.Hide();
-                ksr.Show();
+                mainMenu.Show();
             }
         }
     }
