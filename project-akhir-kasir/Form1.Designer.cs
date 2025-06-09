@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnLogin = new Button();
             textboxPassword = new RichTextBox();
             textboxUsername = new RichTextBox();
             labelUsername = new Label();
             labelPassword = new Label();
             SuspendLayout();
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Location = new Point(294, 370);
-            button1.Name = "button1";
-            button1.Size = new Size(419, 65);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Location = new Point(294, 370);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(419, 65);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // textboxPassword
             // 
@@ -54,6 +56,7 @@
             // 
             // textboxUsername
             // 
+            textboxUsername.Anchor = AnchorStyles.Left;
             textboxUsername.Location = new Point(294, 145);
             textboxUsername.Name = "textboxUsername";
             textboxUsername.Size = new Size(426, 67);
@@ -90,7 +93,7 @@
             Controls.Add(labelUsername);
             Controls.Add(textboxUsername);
             Controls.Add(textboxPassword);
-            Controls.Add(button1);
+            Controls.Add(btnLogin);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -99,7 +102,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnLogin;
         private RichTextBox textboxPassword;
         private RichTextBox textboxUsername;
         private Label labelUsername;

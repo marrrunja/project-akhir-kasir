@@ -11,7 +11,7 @@ namespace project_akhir_kasir.Config
         private static String dbServer = "localhost";
         private static String dbUser = "root";
         private static String dbPassword = "";
-        private static String dbName = "project_pemvis";
+        private static String dbName = "project_pemis";
 
         public static String ConnStr => $"server={dbServer};user={dbUser}; database={dbName}; password={dbPassword}";
     }
