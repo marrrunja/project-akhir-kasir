@@ -70,6 +70,7 @@
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.Size = new Size(1022, 650);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // groupBox3
             // 
@@ -86,7 +87,7 @@
             // cmbFilter
             // 
             cmbFilter.FormattingEnabled = true;
-            cmbFilter.Items.AddRange(new object[] { "Judul", "Penulis", "Penerbit", "Tahun Terbit" });
+            cmbFilter.Items.AddRange(new object[] { "ID Transaksi", "Nama Barang", "Tanggal Transaksi" });
             cmbFilter.Location = new Point(23, 46);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(242, 40);
@@ -238,7 +239,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(btnKembali);
             Name = "History";
-            Text = "Form2";
+            Text = "History Transaksi";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();

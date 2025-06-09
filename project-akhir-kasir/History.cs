@@ -38,5 +38,10 @@ namespace project_akhir_kasir
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

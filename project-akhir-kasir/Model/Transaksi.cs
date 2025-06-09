@@ -10,7 +10,7 @@ namespace project_akhir_kasir.Model
 {
     class Transaksi
     {
-        public static int InsertTransaksi(string idProduk, int idUser, int jumlah, int total)
+        public static int InsertTransaksi(int idProdukInt, int idUser, int jumlah, int total)
         {
             using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
             {
@@ -19,7 +19,7 @@ namespace project_akhir_kasir.Model
                 // Insert ke transaksi
                 string insertTransaksi = "INSERT INTO transaksi (id_produk, id_user, tanggal_transaksi) VALUES (@id_produk, @id_user, NOW()); SELECT LAST_INSERT_ID();";
                 MySqlCommand cmd = new MySqlCommand(insertTransaksi, conn);
-                cmd.Parameters.AddWithValue("@id_produk", idProduk);
+                cmd.Parameters.AddWithValue("@id_produk", idProdukInt);
                 cmd.Parameters.AddWithValue("@id_user", idUser);
 
                 long idTransaksi = Convert.ToInt64(cmd.ExecuteScalar());

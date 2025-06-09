@@ -17,10 +17,10 @@ namespace project_akhir_kasir
     {
         class DetailItem
         {
+            public int IdProdukInt { get; set; }
             public string IdProduk { get; set; }
             public int Jumlah { get; set; }
             public int Harga { get; set; }
-
             public int Total => Harga * Jumlah;
         }
 
@@ -56,7 +56,7 @@ namespace project_akhir_kasir
             using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
             {
                 conn.Open();
-                string query = "SELECT id_produk, nama_produk, harga FROM products WHERE id_produk = @kode";
+                string query = "SELECT id, id_produk, nama_produk, harga FROM products WHERE id_produk = @kode";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@kode", kode);
 
@@ -64,6 +64,7 @@ namespace project_akhir_kasir
                 {
                     if (reader.Read())
                     {
+                        int idInt = reader.GetInt32("id");
                         string id = reader.GetString("id_produk");
                         string nama = reader.GetString("nama_produk");
                         int harga = reader.GetInt32("harga");
@@ -76,6 +77,7 @@ namespace project_akhir_kasir
                         // Tambah ke keranjang list
                         keranjang.Add(new DetailItem
                         {
+                            IdProdukInt = idInt,
                             IdProduk = id,
                             Jumlah = qty,
                             Harga = harga
@@ -133,7 +135,7 @@ namespace project_akhir_kasir
 
             var item = keranjang[0];
 
-            if (Transaksi.InsertTransaksi(item.IdProduk, 1, item.Jumlah, item.Total) > 0)
+            if (Transaksi.InsertTransaksi(item.IdProdukInt, 1, item.Jumlah, item.Total) > 0)
             {
                 MessageBox.Show("Pembayaran berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearInput();
