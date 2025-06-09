@@ -36,9 +36,17 @@
             btnCari = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -73,7 +81,7 @@
             groupBox3.Size = new Size(892, 109);
             groupBox3.TabIndex = 24;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Cari Barang";
+            groupBox3.Text = "Transaksi";
             // 
             // cmbFilter
             // 
@@ -106,51 +114,125 @@
             label1.AutoSize = true;
             label1.Location = new Point(24, 54);
             label1.Name = "label1";
-            label1.Size = new Size(144, 32);
+            label1.Size = new Size(139, 32);
             label1.TabIndex = 25;
-            label1.Text = "ID Transaksi:";
+            label1.Text = "ID Transaksi";
             label1.Click += label1_Click;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(1158, 281);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(477, 650);
+            groupBox1.Size = new Size(524, 417);
             groupBox1.TabIndex = 26;
             groupBox1.TabStop = false;
             groupBox1.Text = "Detail Transaksi";
             // 
-            // label2
+            // label6
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(24, 106);
-            label2.Name = "label2";
-            label2.Size = new Size(164, 32);
-            label2.TabIndex = 26;
-            label2.Text = "Nama Produk:";
-            label2.Click += label2_Click;
+            label6.AutoSize = true;
+            label6.Location = new Point(24, 321);
+            label6.Name = "label6";
+            label6.Size = new Size(198, 32);
+            label6.TabIndex = 30;
+            label6.Text = "Tanggal Transaksi";
             // 
-            // label3
+            // label5
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(24, 154);
-            label3.Name = "label3";
-            label3.Size = new Size(213, 32);
-            label3.TabIndex = 27;
-            label3.Text = "Jumlah Pembelian:\r\n";
+            label5.AutoSize = true;
+            label5.Location = new Point(24, 163);
+            label5.Name = "label5";
+            label5.Size = new Size(158, 32);
+            label5.TabIndex = 29;
+            label5.Text = "Harga Barang";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 201);
+            label4.Location = new Point(24, 268);
             label4.Name = "label4";
             label4.Size = new Size(135, 32);
             label4.TabIndex = 28;
             label4.Text = "Total Harga";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(24, 216);
+            label3.Name = "label3";
+            label3.Size = new Size(208, 32);
+            label3.TabIndex = 27;
+            label3.Text = "Jumlah Pembelian\r\n";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(24, 108);
+            label2.Name = "label2";
+            label2.Size = new Size(158, 32);
+            label2.TabIndex = 26;
+            label2.Text = "Nama Barang";
+            label2.Click += label2_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(250, 54);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(245, 39);
+            textBox1.TabIndex = 19;
+            // 
+            // textBox2
+            // 
+            textBox2.Enabled = false;
+            textBox2.Location = new Point(250, 108);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(245, 39);
+            textBox2.TabIndex = 31;
+            // 
+            // textBox3
+            // 
+            textBox3.Enabled = false;
+            textBox3.Location = new Point(250, 160);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(245, 39);
+            textBox3.TabIndex = 32;
+            // 
+            // textBox4
+            // 
+            textBox4.Enabled = false;
+            textBox4.Location = new Point(250, 215);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(245, 39);
+            textBox4.TabIndex = 33;
+            // 
+            // textBox5
+            // 
+            textBox5.Enabled = false;
+            textBox5.Location = new Point(250, 268);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(245, 39);
+            textBox5.TabIndex = 34;
+            // 
+            // textBox6
+            // 
+            textBox6.Enabled = false;
+            textBox6.Location = new Point(250, 323);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(245, 39);
+            textBox6.TabIndex = 35;
             // 
             // History
             // 
@@ -184,5 +266,13 @@
         private Label label3;
         private Label label2;
         private Label label4;
+        private Label label5;
+        private Label label6;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private TextBox textBox6;
+        private TextBox textBox5;
     }
 }

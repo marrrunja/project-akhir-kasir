@@ -240,7 +240,6 @@
             Controls.Add(groupBox1);
             Name = "ManageBarang";
             Text = "Manage Barang";
-            Load += this.ManageBarang_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
