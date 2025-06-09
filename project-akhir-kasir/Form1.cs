@@ -7,6 +7,8 @@ namespace project_akhir_kasir
         public Form1()
         {
             InitializeComponent();
+            textboxUsername.Text = "muammar";
+            textboxPassword.Text = "123";
         }
 
         private bool HandeLogin(string username, string password)
@@ -47,6 +49,8 @@ namespace project_akhir_kasir
         {
             string username = textboxUsername.Text;
             string password = textboxPassword.Text;
+
+           
 
             if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
