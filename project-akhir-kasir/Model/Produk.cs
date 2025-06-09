@@ -2,6 +2,7 @@
 using project_akhir_kasir.Config;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +42,7 @@ namespace project_akhir_kasir.Model
                     }
                    
                     String queryUpdate = "UPDATE products SET id_produk = @kode WHERE id = @id";
-                     MySqlCommand cmd2 = new MySqlCommand(query, conn);
+                     MySqlCommand cmd2 = new MySqlCommand(queryUpdate, conn);
                     cmd2.Parameters.AddWithValue("@kode", kodeBarang);
                     cmd2.Parameters.AddWithValue("@id", id);
                     cmd2.ExecuteNonQuery();
@@ -57,5 +58,26 @@ namespace project_akhir_kasir.Model
 
             }
         }
+
+        public static MySqlDataAdapter getAllData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM products";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    return da;
+               
+                }
+                catch(Exception ex)
+                {
+                    return new DataTable();
+;
+                }
+            }
+        }
+
     }
 }

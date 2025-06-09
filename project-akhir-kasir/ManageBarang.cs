@@ -1,4 +1,5 @@
 ﻿using project_akhir_kasir.Config;
+using project_akhir_kasir.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,14 +24,37 @@ namespace project_akhir_kasir
             Helper.backToHome(this);
         }
 
+        private void loadData()
+        {
+
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
+        private void clearInput()
+        {
+            txtNamaBarang.Text = "";
+            txtHarga.Text = "";
+            txtStok.Text = "";
+        }
+
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-
+            string nama = txtNamaBarang.Text;
+            int harga = Convert.ToInt32(txtHarga.Text);
+            int stok = Convert.ToInt32(txtStok.Text);
+            if(Produk.insertData(nama, harga, stok) > 0)
+            {
+                MessageBox.Show("Berhasil insert produk", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show("Gagal insert produk", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
