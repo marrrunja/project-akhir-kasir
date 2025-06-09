@@ -59,7 +59,7 @@ namespace project_akhir_kasir.Model
             }
         }
 
-        public static MySqlDataAdapter getAllData()
+        public static DataTable getAllData()
         {
             using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
             {
@@ -68,11 +68,14 @@ namespace project_akhir_kasir.Model
                     conn.Open();
                     string query = "SELECT * FROM products";
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    return da;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                
                 }
                 catch(Exception ex)
                 {
+                    MessageBox.Show("Gagal mengambil data " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return new DataTable();
 ;
                 }

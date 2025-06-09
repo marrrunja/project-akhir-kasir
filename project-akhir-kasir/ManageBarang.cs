@@ -17,6 +17,7 @@ namespace project_akhir_kasir
         public ManageBarang()
         {
             InitializeComponent();
+            loadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +27,14 @@ namespace project_akhir_kasir
 
         private void loadData()
         {
-
+            DataTable dt = Produk.getAllData();
+            dgvBarang.DataSource = dt;
+            dgvBarang.Columns["id"].HeaderText = "ID Produk";
+            dgvBarang.Columns["id"].Visible = false;
+            dgvBarang.Columns["id_produk"].HeaderText = "Kode Produk";
+            dgvBarang.Columns["nama_produk"].HeaderText = "Nama Produk";
+            dgvBarang.Columns["harga"].HeaderText = "Harga Produk";
+            dgvBarang.Columns["stok"].HeaderText = "Stok";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
