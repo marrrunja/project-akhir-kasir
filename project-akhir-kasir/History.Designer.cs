@@ -29,25 +29,32 @@
         private void InitializeComponent()
         {
             btnKembali = new Button();
-            dataGridView1 = new DataGridView();
+            dgvTransaksi = new DataGridView();
             groupBox3 = new GroupBox();
             cmbFilter = new ComboBox();
             txtFilter = new TextBox();
             btnCari = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            TotalTxt = new Label();
+            JumlahPembelianTxt = new Label();
+            TanggalTxt = new Label();
+            HargaTxt = new Label();
+            NamaTxt = new Label();
+            IdTransaksiTxt = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            RefreshBtn = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvTransaksi).BeginInit();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -62,15 +69,16 @@
             btnKembali.UseVisualStyleBackColor = true;
             btnKembali.Click += btnKembali_Click;
             // 
-            // dataGridView1
+            // dgvTransaksi
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(68, 281);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(1022, 650);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvTransaksi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransaksi.Location = new Point(68, 247);
+            dgvTransaksi.Name = "dgvTransaksi";
+            dgvTransaksi.RowHeadersWidth = 82;
+            dgvTransaksi.Size = new Size(892, 650);
+            dgvTransaksi.TabIndex = 1;
+            dgvTransaksi.CellClick += dgvTransaksi_CellClick;
+            dgvTransaksi.CellContentClick += dgvTransaksi_CellContentClick;
             // 
             // groupBox3
             // 
@@ -92,6 +100,7 @@
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(242, 40);
             cmbFilter.TabIndex = 16;
+            cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
             // 
             // txtFilter
             // 
@@ -99,6 +108,7 @@
             txtFilter.Name = "txtFilter";
             txtFilter.Size = new Size(403, 39);
             txtFilter.TabIndex = 17;
+            txtFilter.TextChanged += txtFilter_TextChanged;
             // 
             // btnCari
             // 
@@ -118,70 +128,141 @@
             label1.Size = new Size(139, 32);
             label1.TabIndex = 25;
             label1.Text = "ID Transaksi";
-            label1.Click += label1_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label17);
+            groupBox1.Controls.Add(label16);
+            groupBox1.Controls.Add(label15);
+            groupBox1.Controls.Add(label14);
+            groupBox1.Controls.Add(label13);
+            groupBox1.Controls.Add(label12);
+            groupBox1.Controls.Add(TotalTxt);
+            groupBox1.Controls.Add(JumlahPembelianTxt);
+            groupBox1.Controls.Add(TanggalTxt);
+            groupBox1.Controls.Add(HargaTxt);
+            groupBox1.Controls.Add(NamaTxt);
+            groupBox1.Controls.Add(IdTransaksiTxt);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(1158, 281);
+            groupBox1.Location = new Point(1001, 247);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(524, 417);
+            groupBox1.Size = new Size(681, 475);
             groupBox1.TabIndex = 26;
             groupBox1.TabStop = false;
             groupBox1.Text = "Detail Transaksi";
             // 
-            // textBox6
+            // label17
             // 
-            textBox6.Location = new Point(250, 323);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(245, 39);
-            textBox6.TabIndex = 35;
+            label17.AutoSize = true;
+            label17.Location = new Point(274, 321);
+            label17.Name = "label17";
+            label17.Size = new Size(19, 32);
+            label17.TabIndex = 41;
+            label17.Text = ":";
             // 
-            // textBox5
+            // label16
             // 
-            textBox5.Location = new Point(250, 268);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(245, 39);
-            textBox5.TabIndex = 34;
+            label16.AutoSize = true;
+            label16.Location = new Point(274, 268);
+            label16.Name = "label16";
+            label16.Size = new Size(19, 32);
+            label16.TabIndex = 40;
+            label16.Text = ":";
             // 
-            // textBox4
+            // label15
             // 
-            textBox4.Location = new Point(250, 215);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(245, 39);
-            textBox4.TabIndex = 33;
+            label15.AutoSize = true;
+            label15.Location = new Point(274, 216);
+            label15.Name = "label15";
+            label15.Size = new Size(19, 32);
+            label15.TabIndex = 39;
+            label15.Text = ":";
             // 
-            // textBox3
+            // label14
             // 
-            textBox3.Location = new Point(250, 160);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(245, 39);
-            textBox3.TabIndex = 32;
+            label14.AutoSize = true;
+            label14.Location = new Point(274, 163);
+            label14.Name = "label14";
+            label14.Size = new Size(19, 32);
+            label14.TabIndex = 38;
+            label14.Text = ":";
             // 
-            // textBox2
+            // label13
             // 
-            textBox2.Location = new Point(250, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(245, 39);
-            textBox2.TabIndex = 31;
+            label13.AutoSize = true;
+            label13.Location = new Point(274, 108);
+            label13.Name = "label13";
+            label13.Size = new Size(19, 32);
+            label13.TabIndex = 37;
+            label13.Text = ":";
             // 
-            // textBox1
+            // label12
             // 
-            textBox1.Location = new Point(250, 54);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(245, 39);
-            textBox1.TabIndex = 19;
+            label12.AutoSize = true;
+            label12.Location = new Point(274, 54);
+            label12.Name = "label12";
+            label12.Size = new Size(19, 32);
+            label12.TabIndex = 36;
+            label12.Text = ":";
+            // 
+            // TotalTxt
+            // 
+            TotalTxt.AutoSize = true;
+            TotalTxt.Location = new Point(299, 268);
+            TotalTxt.Name = "TotalTxt";
+            TotalTxt.Size = new Size(24, 32);
+            TotalTxt.TabIndex = 35;
+            TotalTxt.Text = "-";
+            // 
+            // JumlahPembelianTxt
+            // 
+            JumlahPembelianTxt.AutoSize = true;
+            JumlahPembelianTxt.Location = new Point(299, 216);
+            JumlahPembelianTxt.Name = "JumlahPembelianTxt";
+            JumlahPembelianTxt.Size = new Size(24, 32);
+            JumlahPembelianTxt.TabIndex = 34;
+            JumlahPembelianTxt.Text = "-";
+            // 
+            // TanggalTxt
+            // 
+            TanggalTxt.AutoSize = true;
+            TanggalTxt.Location = new Point(299, 321);
+            TanggalTxt.Name = "TanggalTxt";
+            TanggalTxt.Size = new Size(24, 32);
+            TanggalTxt.TabIndex = 34;
+            TanggalTxt.Text = "-";
+            // 
+            // HargaTxt
+            // 
+            HargaTxt.AutoSize = true;
+            HargaTxt.Location = new Point(299, 163);
+            HargaTxt.Name = "HargaTxt";
+            HargaTxt.Size = new Size(24, 32);
+            HargaTxt.TabIndex = 33;
+            HargaTxt.Text = "-";
+            // 
+            // NamaTxt
+            // 
+            NamaTxt.AutoSize = true;
+            NamaTxt.Location = new Point(299, 108);
+            NamaTxt.Name = "NamaTxt";
+            NamaTxt.Size = new Size(24, 32);
+            NamaTxt.TabIndex = 32;
+            NamaTxt.Text = "-";
+            // 
+            // IdTransaksiTxt
+            // 
+            IdTransaksiTxt.AutoSize = true;
+            IdTransaksiTxt.Location = new Point(299, 54);
+            IdTransaksiTxt.Name = "IdTransaksiTxt";
+            IdTransaksiTxt.Size = new Size(24, 32);
+            IdTransaksiTxt.TabIndex = 31;
+            IdTransaksiTxt.Text = "-";
             // 
             // label6
             // 
@@ -227,21 +308,31 @@
             label2.Size = new Size(158, 32);
             label2.TabIndex = 26;
             label2.Text = "Nama Barang";
-            label2.Click += label2_Click;
+            // 
+            // RefreshBtn
+            // 
+            RefreshBtn.Location = new Point(279, 42);
+            RefreshBtn.Name = "RefreshBtn";
+            RefreshBtn.Size = new Size(155, 46);
+            RefreshBtn.TabIndex = 27;
+            RefreshBtn.Text = "Refresh";
+            RefreshBtn.UseVisualStyleBackColor = true;
+            RefreshBtn.Click += RefreshBtn_Click;
             // 
             // History
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1715, 968);
+            Controls.Add(RefreshBtn);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvTransaksi);
             Controls.Add(btnKembali);
             Name = "History";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "History Transaksi";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTransaksi).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -252,7 +343,7 @@
         #endregion
 
         private Button btnKembali;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTransaksi;
         private GroupBox groupBox3;
         private ComboBox cmbFilter;
         private TextBox txtFilter;
@@ -264,11 +355,18 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private Label IdTransaksiTxt;
+        private Label TotalTxt;
+        private Label JumlahPembelianTxt;
+        private Label TanggalTxt;
+        private Label HargaTxt;
+        private Label NamaTxt;
+        private Label label13;
+        private Label label12;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Button RefreshBtn;
     }
 }
