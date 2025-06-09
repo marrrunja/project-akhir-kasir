@@ -30,15 +30,14 @@
         {
             KasirBtn = new Button();
             ManageBarangBtn = new Button();
-            button3 = new Button();
+            HistoryBtn = new Button();
             SuspendLayout();
             // 
             // KasirBtn
             // 
-            KasirBtn.Location = new Point(150, 176);
-            KasirBtn.Margin = new Padding(2);
+            KasirBtn.Location = new Point(195, 225);
             KasirBtn.Name = "KasirBtn";
-            KasirBtn.Size = new Size(238, 100);
+            KasirBtn.Size = new Size(309, 128);
             KasirBtn.TabIndex = 0;
             KasirBtn.Text = "Kasir";
             KasirBtn.UseVisualStyleBackColor = true;
@@ -46,34 +45,32 @@
             // 
             // ManageBarangBtn
             // 
-            ManageBarangBtn.Location = new Point(445, 176);
-            ManageBarangBtn.Margin = new Padding(2);
+            ManageBarangBtn.Location = new Point(578, 225);
             ManageBarangBtn.Name = "ManageBarangBtn";
-            ManageBarangBtn.Size = new Size(238, 100);
+            ManageBarangBtn.Size = new Size(309, 128);
             ManageBarangBtn.TabIndex = 1;
             ManageBarangBtn.Text = "Manage Barang";
             ManageBarangBtn.UseVisualStyleBackColor = true;
             ManageBarangBtn.Click += ManageBarangBtn_Click;
             // 
-            // button3
+            // HistoryBtn
             // 
-            button3.Location = new Point(734, 176);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(238, 100);
-            button3.TabIndex = 2;
-            button3.Text = "##";
-            button3.UseVisualStyleBackColor = true;
+            HistoryBtn.Location = new Point(954, 225);
+            HistoryBtn.Name = "HistoryBtn";
+            HistoryBtn.Size = new Size(309, 128);
+            HistoryBtn.TabIndex = 2;
+            HistoryBtn.Text = "History Transaksi";
+            HistoryBtn.UseVisualStyleBackColor = true;
+            HistoryBtn.Click += HistoryBtn_Click;
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1128, 640);
-            Controls.Add(button3);
+            ClientSize = new Size(1466, 819);
+            Controls.Add(HistoryBtn);
             Controls.Add(ManageBarangBtn);
             Controls.Add(KasirBtn);
-            Margin = new Padding(2);
             Name = "MainMenu";
             Text = "Menu Utama";
             ResumeLayout(false);
@@ -83,6 +80,6 @@
 
         private Button KasirBtn;
         private Button ManageBarangBtn;
-        private Button button3;
+        private Button HistoryBtn;
     }
 }
