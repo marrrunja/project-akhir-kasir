@@ -239,6 +239,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(btnKembali);
             Name = "History";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "History Transaksi";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);

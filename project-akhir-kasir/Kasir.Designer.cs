@@ -227,6 +227,7 @@
             Controls.Add(GroupBoxPembelian);
             Controls.Add(dgvBarangBeli);
             Name = "FormKasir";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Kasir";
             ((System.ComponentModel.ISupportInitialize)QtyNumeric).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvBarangBeli).EndInit();

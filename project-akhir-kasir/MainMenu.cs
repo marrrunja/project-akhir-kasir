@@ -31,6 +31,11 @@ namespace project_akhir_kasir
 
         private void HistoryBtn_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void HistoryBtn_Click_1(object sender, EventArgs e)
+        {
             Helper.redirectTo(this, new History());
         }
     }

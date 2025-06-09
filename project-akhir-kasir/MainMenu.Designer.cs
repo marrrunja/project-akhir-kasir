@@ -61,7 +61,7 @@
             HistoryBtn.TabIndex = 2;
             HistoryBtn.Text = "History Transaksi";
             HistoryBtn.UseVisualStyleBackColor = true;
-         
+            HistoryBtn.Click += HistoryBtn_Click_1;
             // 
             // MainMenu
             // 
@@ -72,6 +72,7 @@
             Controls.Add(ManageBarangBtn);
             Controls.Add(KasirBtn);
             Name = "MainMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Utama";
             ResumeLayout(false);
         }

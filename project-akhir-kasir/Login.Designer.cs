@@ -1,6 +1,6 @@
 ﻿namespace project_akhir_kasir
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,9 +38,10 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(294, 370);
+            btnLogin.Location = new Point(382, 474);
+            btnLogin.Margin = new Padding(4, 4, 4, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(419, 65);
+            btnLogin.Size = new Size(545, 83);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -48,18 +49,20 @@
             // 
             // textboxPassword
             // 
-            textboxPassword.Location = new Point(294, 280);
+            textboxPassword.Location = new Point(382, 358);
+            textboxPassword.Margin = new Padding(4, 4, 4, 4);
             textboxPassword.Name = "textboxPassword";
-            textboxPassword.Size = new Size(426, 67);
+            textboxPassword.Size = new Size(553, 85);
             textboxPassword.TabIndex = 3;
             textboxPassword.Text = "";
             // 
             // textboxUsername
             // 
             textboxUsername.Anchor = AnchorStyles.Left;
-            textboxUsername.Location = new Point(294, 145);
+            textboxUsername.Location = new Point(382, 186);
+            textboxUsername.Margin = new Padding(4, 4, 4, 4);
             textboxUsername.Name = "textboxUsername";
-            textboxUsername.Size = new Size(426, 67);
+            textboxUsername.Size = new Size(553, 85);
             textboxUsername.TabIndex = 4;
             textboxUsername.Text = "";
             // 
@@ -67,9 +70,10 @@
             // 
             labelUsername.AutoSize = true;
             labelUsername.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUsername.Location = new Point(294, 99);
+            labelUsername.Location = new Point(382, 127);
+            labelUsername.Margin = new Padding(4, 0, 4, 0);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(124, 32);
+            labelUsername.Size = new Size(167, 45);
             labelUsername.TabIndex = 5;
             labelUsername.Text = "Username";
             // 
@@ -77,25 +81,28 @@
             // 
             labelPassword.AutoSize = true;
             labelPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPassword.Location = new Point(294, 230);
+            labelPassword.Location = new Point(382, 294);
+            labelPassword.Margin = new Padding(4, 0, 4, 0);
             labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(124, 32);
+            labelPassword.Size = new Size(167, 45);
             labelPassword.TabIndex = 6;
             labelPassword.Text = "Username";
             // 
-            // Form1
+            // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(943, 523);
+            ClientSize = new Size(1226, 669);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textboxUsername);
             Controls.Add(textboxPassword);
             Controls.Add(btnLogin);
-            Name = "Form1";
-            Text = "Form1";
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form Login";
             ResumeLayout(false);
             PerformLayout();
         }

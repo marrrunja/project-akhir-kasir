@@ -215,7 +215,7 @@
             // btnKembali
             // 
             btnKembali.Location = new Point(39, 15);
-            btnKembali.Margin = new Padding(4, 4, 4, 4);
+            btnKembali.Margin = new Padding(4);
             btnKembali.Name = "btnKembali";
             btnKembali.Size = new Size(146, 44);
             btnKembali.TabIndex = 8;
@@ -234,6 +234,7 @@
             Controls.Add(dgvBarang);
             Controls.Add(groupBox1);
             Name = "ManageBarang";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Barang";
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();

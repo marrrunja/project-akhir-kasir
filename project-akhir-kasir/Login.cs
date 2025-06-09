@@ -2,9 +2,9 @@ using MySql.Data.MySqlClient;
 using project_akhir_kasir.Config;
 namespace project_akhir_kasir
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             textboxUsername.Text = "muammar";
