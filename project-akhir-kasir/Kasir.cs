@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace project_akhir_kasir
 {
-    public partial class Kasir: Form
+    public partial class FormKasir : Form
     {
-        public Kasir()
+        public FormKasir()
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
