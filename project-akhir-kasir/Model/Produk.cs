@@ -77,7 +77,6 @@ namespace project_akhir_kasir.Model
                 {
                     MessageBox.Show("Gagal mengambil data " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return new DataTable();
-;
                 }
             }
         }

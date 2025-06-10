@@ -58,6 +58,7 @@ namespace project_akhir_kasir
             {
                 MessageBox.Show("Berhasil insert produk", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearInput();
+                loadData();
             }
             else
             {
