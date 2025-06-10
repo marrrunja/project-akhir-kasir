@@ -75,6 +75,7 @@
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(187, 33);
             cmbFilter.TabIndex = 16;
+            cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
             // 
             // txtFilter
             // 
@@ -83,6 +84,7 @@
             txtFilter.Name = "txtFilter";
             txtFilter.Size = new Size(303, 31);
             txtFilter.TabIndex = 17;
+            txtFilter.TextChanged += txtFilter_TextChanged;
             // 
             // btnCari
             // 
@@ -93,6 +95,7 @@
             btnCari.TabIndex = 18;
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = true;
+            btnCari.Click += btnCari_Click;
             // 
             // groupBox2
             // 
@@ -118,6 +121,7 @@
             btnClear.TabIndex = 14;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnSimpan
             // 
@@ -139,6 +143,7 @@
             btnEdit.TabIndex = 11;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnHapus
             // 
@@ -149,6 +154,7 @@
             btnHapus.TabIndex = 12;
             btnHapus.Text = "Hapus";
             btnHapus.UseVisualStyleBackColor = true;
+            btnHapus.Click += btnHapus_Click;
             // 
             // dgvBarang
             // 
@@ -159,6 +165,7 @@
             dgvBarang.RowHeadersWidth = 82;
             dgvBarang.Size = new Size(684, 645);
             dgvBarang.TabIndex = 21;
+            dgvBarang.CellClick += dgvBarang_CellClick;
             // 
             // groupBox1
             // 
