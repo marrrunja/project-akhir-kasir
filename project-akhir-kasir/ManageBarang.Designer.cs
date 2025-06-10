@@ -46,6 +46,9 @@
             label3 = new Label();
             label4 = new Label();
             btnKembali = new Button();
+            btnPrev = new Button();
+            btnNext = new Button();
+            labelPage = new Label();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBarang).BeginInit();
@@ -69,7 +72,7 @@
             // cmbFilter
             // 
             cmbFilter.FormattingEnabled = true;
-            cmbFilter.Items.AddRange(new object[] { "Judul", "Penulis", "Penerbit", "Tahun Terbit" });
+            cmbFilter.Items.AddRange(new object[] { "Nama", "Harga", "Stok", "Kode" });
             cmbFilter.Location = new Point(20, 30);
             cmbFilter.Margin = new Padding(2);
             cmbFilter.Name = "cmbFilter";
@@ -163,7 +166,7 @@
             dgvBarang.Margin = new Padding(2);
             dgvBarang.Name = "dgvBarang";
             dgvBarang.RowHeadersWidth = 82;
-            dgvBarang.Size = new Size(684, 645);
+            dgvBarang.Size = new Size(684, 348);
             dgvBarang.TabIndex = 21;
             dgvBarang.CellClick += dgvBarang_CellClick;
             // 
@@ -249,11 +252,47 @@
             btnKembali.UseVisualStyleBackColor = true;
             btnKembali.Click += button1_Click;
             // 
+            // btnPrev
+            // 
+            btnPrev.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPrev.Location = new Point(649, 397);
+            btnPrev.Name = "btnPrev";
+            btnPrev.Size = new Size(156, 59);
+            btnPrev.TabIndex = 24;
+            btnPrev.Text = "Prev";
+            btnPrev.UseVisualStyleBackColor = true;
+            btnPrev.Click += btnPrev_Click;
+            // 
+            // btnNext
+            // 
+            btnNext.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNext.Location = new Point(830, 397);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(156, 59);
+            btnNext.TabIndex = 25;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
+            // labelPage
+            // 
+            labelPage.AutoSize = true;
+            labelPage.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPage.Location = new Point(1173, 412);
+            labelPage.Margin = new Padding(2, 0, 2, 0);
+            labelPage.Name = "labelPage";
+            labelPage.Size = new Size(160, 28);
+            labelPage.TabIndex = 8;
+            labelPage.Text = "Halaman 1 dari 2";
+            // 
             // ManageBarang
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1480, 695);
+            Controls.Add(labelPage);
+            Controls.Add(btnNext);
+            Controls.Add(btnPrev);
             Controls.Add(btnKembali);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -270,6 +309,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -292,5 +332,8 @@
         private Label label3;
         private Label label4;
         private Button btnKembali;
+        private Button btnPrev;
+        private Button btnNext;
+        private Label labelPage;
     }
 }
