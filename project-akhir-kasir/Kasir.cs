@@ -17,6 +17,7 @@ namespace project_akhir_kasir
     {
         class DetailItem
         {
+            private int idTransaksi;
             public int IdProdukInt { get; set; }
             public string IdProduk { get; set; }
             public int Jumlah { get; set; }
@@ -114,9 +115,20 @@ namespace project_akhir_kasir
         {
 
         }
+        private bool validasiInput()
+        {
+            int angka = Convert.ToInt32(QtyNumeric.Value);
+            return angka <= 0;
+        }
         private void BayarBtn_Click(object sender, EventArgs e)
         {
             int cash = Convert.ToInt32(CashNumeric.Value);
+
+            if (validasiInput())
+            {
+                MessageBox.Show("Jumlah pembelian tidak boleh nol");
+                return;
+            }
 
             if (keranjang.Count != 1)
             {
@@ -138,7 +150,7 @@ namespace project_akhir_kasir
             if (Transaksi.InsertTransaksi(item.IdProdukInt, 1, item.Jumlah, item.Total) > 0)
             {
                 MessageBox.Show("Pembayaran berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearInput();
+                //clearInput();
             }
             else
             {
@@ -147,13 +159,13 @@ namespace project_akhir_kasir
         }
         private void clearInput()
         {
-          
+
             txtKodeBarang.Text = "";
             QtyNumeric.Value = 1;
             CashNumeric.Value = 0;
             KembalianTxt.Text = "";
             TotalTxt.Text = "0";
-        
+
             dgvBarangBeli.Rows.Clear();
 
             keranjang.Clear();
@@ -165,6 +177,18 @@ namespace project_akhir_kasir
         private void KembalianTxt_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCetak_Click(object sender, EventArgs e)
+        {
+            FormReportTransaksi frm = new FormReportTransaksi();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            clearInput();
         }
     }
 }

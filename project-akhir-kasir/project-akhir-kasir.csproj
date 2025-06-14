@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="2.1.4" />
+    <PackageReference Include="CrystalReports" Version="13.0.5.891" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
   </ItemGroup>
 

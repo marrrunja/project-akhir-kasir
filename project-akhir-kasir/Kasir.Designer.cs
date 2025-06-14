@@ -39,11 +39,13 @@
             CashNumeric = new NumericUpDown();
             BayarBtn = new Button();
             groupBox1 = new GroupBox();
+            btnCetak = new Button();
             KembalianTxt = new Label();
             KembalianLabel = new Label();
             TotalTxt = new Label();
             label4 = new Label();
             btnBack = new Button();
+            btnSelesai = new Button();
             ((System.ComponentModel.ISupportInitialize)QtyNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBarangBeli).BeginInit();
             GroupBoxPembelian.SuspendLayout();
@@ -54,7 +56,7 @@
             // txtKodeBarang
             // 
             txtKodeBarang.Location = new Point(170, 42);
-            txtKodeBarang.Margin = new Padding(2, 2, 2, 2);
+            txtKodeBarang.Margin = new Padding(2);
             txtKodeBarang.Name = "txtKodeBarang";
             txtKodeBarang.Size = new Size(467, 31);
             txtKodeBarang.TabIndex = 0;
@@ -73,7 +75,7 @@
             // TambahBtn
             // 
             TambahBtn.Location = new Point(264, 150);
-            TambahBtn.Margin = new Padding(2, 2, 2, 2);
+            TambahBtn.Margin = new Padding(2);
             TambahBtn.Name = "TambahBtn";
             TambahBtn.Size = new Size(115, 36);
             TambahBtn.TabIndex = 2;
@@ -94,7 +96,7 @@
             // QtyNumeric
             // 
             QtyNumeric.Location = new Point(170, 96);
-            QtyNumeric.Margin = new Padding(2, 2, 2, 2);
+            QtyNumeric.Margin = new Padding(2);
             QtyNumeric.Name = "QtyNumeric";
             QtyNumeric.Size = new Size(185, 31);
             QtyNumeric.TabIndex = 4;
@@ -104,7 +106,7 @@
             // 
             dgvBarangBeli.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBarangBeli.Location = new Point(780, 60);
-            dgvBarangBeli.Margin = new Padding(2, 2, 2, 2);
+            dgvBarangBeli.Margin = new Padding(2);
             dgvBarangBeli.Name = "dgvBarangBeli";
             dgvBarangBeli.RowHeadersWidth = 82;
             dgvBarangBeli.Size = new Size(686, 279);
@@ -119,9 +121,9 @@
             GroupBoxPembelian.Controls.Add(QtyNumeric);
             GroupBoxPembelian.Controls.Add(label2);
             GroupBoxPembelian.Location = new Point(17, 60);
-            GroupBoxPembelian.Margin = new Padding(2, 2, 2, 2);
+            GroupBoxPembelian.Margin = new Padding(2);
             GroupBoxPembelian.Name = "GroupBoxPembelian";
-            GroupBoxPembelian.Padding = new Padding(2, 2, 2, 2);
+            GroupBoxPembelian.Padding = new Padding(2);
             GroupBoxPembelian.Size = new Size(687, 220);
             GroupBoxPembelian.TabIndex = 7;
             GroupBoxPembelian.TabStop = false;
@@ -140,7 +142,7 @@
             // CashNumeric
             // 
             CashNumeric.Location = new Point(170, 104);
-            CashNumeric.Margin = new Padding(2, 2, 2, 2);
+            CashNumeric.Margin = new Padding(2);
             CashNumeric.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             CashNumeric.Name = "CashNumeric";
             CashNumeric.Size = new Size(185, 31);
@@ -149,7 +151,7 @@
             // BayarBtn
             // 
             BayarBtn.Location = new Point(412, 104);
-            BayarBtn.Margin = new Padding(2, 2, 2, 2);
+            BayarBtn.Margin = new Padding(2);
             BayarBtn.Name = "BayarBtn";
             BayarBtn.Size = new Size(115, 32);
             BayarBtn.TabIndex = 9;
@@ -159,6 +161,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnSelesai);
+            groupBox1.Controls.Add(btnCetak);
             groupBox1.Controls.Add(KembalianTxt);
             groupBox1.Controls.Add(KembalianLabel);
             groupBox1.Controls.Add(TotalTxt);
@@ -167,13 +171,23 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(CashNumeric);
             groupBox1.Location = new Point(17, 310);
-            groupBox1.Margin = new Padding(2, 2, 2, 2);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Padding = new Padding(2);
             groupBox1.Size = new Size(697, 263);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Pembayaran";
+            // 
+            // btnCetak
+            // 
+            btnCetak.Location = new Point(33, 201);
+            btnCetak.Name = "btnCetak";
+            btnCetak.Size = new Size(128, 41);
+            btnCetak.TabIndex = 14;
+            btnCetak.Text = "Cetak";
+            btnCetak.UseVisualStyleBackColor = true;
+            btnCetak.Click += btnCetak_Click;
             // 
             // KembalianTxt
             // 
@@ -233,6 +247,16 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // btnSelesai
+            // 
+            btnSelesai.Location = new Point(183, 201);
+            btnSelesai.Name = "btnSelesai";
+            btnSelesai.Size = new Size(128, 41);
+            btnSelesai.TabIndex = 15;
+            btnSelesai.Text = "Selesai";
+            btnSelesai.UseVisualStyleBackColor = true;
+            btnSelesai.Click += btnSelesai_Click;
+            // 
             // FormKasir
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -242,7 +266,7 @@
             Controls.Add(groupBox1);
             Controls.Add(GroupBoxPembelian);
             Controls.Add(dgvBarangBeli);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "FormKasir";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kasir";
@@ -274,5 +298,7 @@
         private Label KembalianTxt;
         private Label KembalianLabel;
         private Button btnBack;
+        private Button btnCetak;
+        private Button btnSelesai;
     }
 }
