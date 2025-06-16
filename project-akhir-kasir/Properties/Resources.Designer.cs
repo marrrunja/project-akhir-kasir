@@ -73,6 +73,16 @@ namespace project_akhir_kasir.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9690b45b_4844_4e6d_aa53_f7e4cb2c6279 {
+            get {
+                object obj = ResourceManager.GetObject("9690b45b-4844-4e6d-aa53-f7e4cb2c6279", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);

@@ -61,27 +61,31 @@
             // 
             // txtKodeBarang
             // 
-            txtKodeBarang.Location = new Point(221, 54);
+            txtKodeBarang.Location = new Point(170, 42);
+            txtKodeBarang.Margin = new Padding(2);
             txtKodeBarang.Name = "txtKodeBarang";
-            txtKodeBarang.Size = new Size(260, 39);
+            txtKodeBarang.Size = new Size(201, 31);
             txtKodeBarang.TabIndex = 0;
             txtKodeBarang.TextChanged += txtKodeBarang_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(26, 58);
+            label1.Location = new Point(20, 45);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(155, 32);
+            label1.Size = new Size(118, 25);
             label1.TabIndex = 1;
             label1.Text = "Kode Barang";
             // 
             // TambahBtn
             // 
+            TambahBtn.Cursor = Cursors.Hand;
             TambahBtn.FlatStyle = FlatStyle.System;
-            TambahBtn.Location = new Point(273, 201);
+            TambahBtn.Location = new Point(210, 157);
+            TambahBtn.Margin = new Padding(2);
             TambahBtn.Name = "TambahBtn";
-            TambahBtn.Size = new Size(172, 46);
+            TambahBtn.Size = new Size(132, 36);
             TambahBtn.TabIndex = 2;
             TambahBtn.Text = "Tambah";
             TambahBtn.UseVisualStyleBackColor = true;
@@ -90,17 +94,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(26, 131);
+            label2.Location = new Point(20, 102);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(117, 32);
+            label2.Size = new Size(90, 25);
             label2.TabIndex = 3;
             label2.Text = "Kuantitas";
             // 
             // QtyNumeric
             // 
-            QtyNumeric.Location = new Point(221, 123);
+            QtyNumeric.Location = new Point(170, 96);
+            QtyNumeric.Margin = new Padding(2);
             QtyNumeric.Name = "QtyNumeric";
-            QtyNumeric.Size = new Size(260, 39);
+            QtyNumeric.Size = new Size(200, 31);
             QtyNumeric.TabIndex = 4;
             QtyNumeric.ValueChanged += QtyNumeric_ValueChanged;
             // 
@@ -108,10 +114,11 @@
             // 
             dgvBarangBeli.BackgroundColor = Color.White;
             dgvBarangBeli.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBarangBeli.Location = new Point(32, 49);
+            dgvBarangBeli.Location = new Point(25, 38);
+            dgvBarangBeli.Margin = new Padding(2);
             dgvBarangBeli.Name = "dgvBarangBeli";
             dgvBarangBeli.RowHeadersWidth = 82;
-            dgvBarangBeli.Size = new Size(892, 266);
+            dgvBarangBeli.Size = new Size(686, 208);
             dgvBarangBeli.TabIndex = 5;
             dgvBarangBeli.CellContentClick += dgvBarangBeli_CellContentClick;
             // 
@@ -125,10 +132,11 @@
             GroupBoxPembelian.Controls.Add(label2);
             GroupBoxPembelian.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GroupBoxPembelian.ForeColor = Color.AliceBlue;
-            GroupBoxPembelian.Location = new Point(30, 39);
+            GroupBoxPembelian.Location = new Point(23, 30);
             GroupBoxPembelian.Margin = new Padding(0);
             GroupBoxPembelian.Name = "GroupBoxPembelian";
-            GroupBoxPembelian.Size = new Size(739, 282);
+            GroupBoxPembelian.Padding = new Padding(2);
+            GroupBoxPembelian.Size = new Size(568, 220);
             GroupBoxPembelian.TabIndex = 7;
             GroupBoxPembelian.TabStop = false;
             GroupBoxPembelian.Text = "Pembelian";
@@ -136,29 +144,33 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(43, 134);
+            label3.Location = new Point(33, 105);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(67, 32);
+            label3.Size = new Size(52, 25);
             label3.TabIndex = 8;
             label3.Text = "Cash";
             // 
             // CashNumeric
             // 
             CashNumeric.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CashNumeric.Location = new Point(221, 133);
+            CashNumeric.Location = new Point(170, 104);
+            CashNumeric.Margin = new Padding(2);
             CashNumeric.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             CashNumeric.Name = "CashNumeric";
-            CashNumeric.Size = new Size(260, 39);
+            CashNumeric.Size = new Size(200, 31);
             CashNumeric.TabIndex = 5;
             // 
             // BayarBtn
             // 
             BayarBtn.BackColor = Color.DeepSkyBlue;
+            BayarBtn.Cursor = Cursors.Hand;
             BayarBtn.FlatStyle = FlatStyle.System;
             BayarBtn.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            BayarBtn.Location = new Point(536, 133);
+            BayarBtn.Location = new Point(412, 104);
+            BayarBtn.Margin = new Padding(2);
             BayarBtn.Name = "BayarBtn";
-            BayarBtn.Size = new Size(150, 41);
+            BayarBtn.Size = new Size(115, 32);
             BayarBtn.TabIndex = 9;
             BayarBtn.Text = "Bayar";
             BayarBtn.UseVisualStyleBackColor = false;
@@ -177,21 +189,23 @@
             groupBox1.Controls.Add(CashNumeric);
             groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.AliceBlue;
-            groupBox1.Location = new Point(30, 380);
+            groupBox1.Location = new Point(23, 297);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(739, 337);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(568, 263);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Pembayaran";
             // 
             // btnSelesai
             // 
+            btnSelesai.Cursor = Cursors.Hand;
             btnSelesai.FlatStyle = FlatStyle.System;
             btnSelesai.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            btnSelesai.Location = new Point(413, 257);
-            btnSelesai.Margin = new Padding(4);
+            btnSelesai.Location = new Point(318, 201);
             btnSelesai.Name = "btnSelesai";
-            btnSelesai.Size = new Size(166, 52);
+            btnSelesai.Size = new Size(128, 41);
             btnSelesai.TabIndex = 15;
             btnSelesai.Text = "Selesai";
             btnSelesai.UseVisualStyleBackColor = true;
@@ -199,12 +213,12 @@
             // 
             // btnCetak
             // 
+            btnCetak.Cursor = Cursors.Hand;
             btnCetak.FlatStyle = FlatStyle.System;
             btnCetak.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            btnCetak.Location = new Point(221, 257);
-            btnCetak.Margin = new Padding(4);
+            btnCetak.Location = new Point(170, 201);
             btnCetak.Name = "btnCetak";
-            btnCetak.Size = new Size(166, 52);
+            btnCetak.Size = new Size(128, 41);
             btnCetak.TabIndex = 14;
             btnCetak.Text = "Cetak";
             btnCetak.UseVisualStyleBackColor = true;
@@ -215,10 +229,11 @@
             KembalianTxt.AutoSize = true;
             KembalianTxt.ImageAlign = ContentAlignment.BottomLeft;
             KembalianTxt.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            KembalianTxt.Location = new Point(221, 207);
+            KembalianTxt.Location = new Point(170, 162);
+            KembalianTxt.Margin = new Padding(2, 0, 2, 0);
             KembalianTxt.Name = "KembalianTxt";
             KembalianTxt.RightToLeft = RightToLeft.No;
-            KembalianTxt.Size = new Size(28, 32);
+            KembalianTxt.Size = new Size(22, 25);
             KembalianTxt.TabIndex = 13;
             KembalianTxt.Text = "0";
             KembalianTxt.Click += KembalianTxt_Click;
@@ -226,9 +241,10 @@
             // KembalianLabel
             // 
             KembalianLabel.AutoSize = true;
-            KembalianLabel.Location = new Point(43, 207);
+            KembalianLabel.Location = new Point(33, 162);
+            KembalianLabel.Margin = new Padding(2, 0, 2, 0);
             KembalianLabel.Name = "KembalianLabel";
-            KembalianLabel.Size = new Size(135, 32);
+            KembalianLabel.Size = new Size(102, 25);
             KembalianLabel.TabIndex = 12;
             KembalianLabel.Text = "Kembalian";
             // 
@@ -237,10 +253,11 @@
             TotalTxt.AutoSize = true;
             TotalTxt.ImageAlign = ContentAlignment.BottomLeft;
             TotalTxt.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            TotalTxt.Location = new Point(221, 67);
+            TotalTxt.Location = new Point(170, 52);
+            TotalTxt.Margin = new Padding(2, 0, 2, 0);
             TotalTxt.Name = "TotalTxt";
             TotalTxt.RightToLeft = RightToLeft.No;
-            TotalTxt.Size = new Size(28, 32);
+            TotalTxt.Size = new Size(22, 25);
             TotalTxt.TabIndex = 11;
             TotalTxt.Text = "0";
             TotalTxt.Click += TotalTxt_Click;
@@ -248,9 +265,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(43, 67);
+            label4.Location = new Point(33, 52);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(77, 32);
+            label4.Size = new Size(59, 25);
             label4.TabIndex = 10;
             label4.Text = "Total ";
             // 
@@ -260,10 +278,9 @@
             btnBack.FlatStyle = FlatStyle.System;
             btnBack.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.AliceBlue;
-            btnBack.Location = new Point(29, 18);
-            btnBack.Margin = new Padding(4);
+            btnBack.Location = new Point(22, 14);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(247, 44);
+            btnBack.Size = new Size(190, 34);
             btnBack.TabIndex = 11;
             btnBack.Text = "Kembali";
             btnBack.UseVisualStyleBackColor = false;
@@ -274,17 +291,19 @@
             panel1.BackColor = Color.DodgerBlue;
             panel1.Controls.Add(btnBack);
             panel1.Location = new Point(-2, 0);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1929, 82);
+            panel1.Size = new Size(1484, 64);
             panel1.TabIndex = 12;
             // 
             // panel2
             // 
             panel2.BackColor = Color.DodgerBlue;
             panel2.Controls.Add(dgvBarangBeli);
-            panel2.Location = new Point(937, 131);
+            panel2.Location = new Point(721, 102);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(949, 361);
+            panel2.Size = new Size(730, 282);
             panel2.TabIndex = 13;
             // 
             // panel3
@@ -292,21 +311,22 @@
             panel3.BackColor = Color.DodgerBlue;
             panel3.Controls.Add(GroupBoxPembelian);
             panel3.Controls.Add(groupBox1);
-            panel3.Location = new Point(91, 131);
+            panel3.Location = new Point(70, 102);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(801, 776);
+            panel3.Size = new Size(616, 606);
             panel3.TabIndex = 14;
             // 
             // FormKasir
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._8270297;
-            ClientSize = new Size(1924, 997);
+            ClientSize = new Size(1480, 779);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(2);
             Name = "FormKasir";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kasir";

@@ -144,5 +144,60 @@ namespace project_akhir_kasir.Model
             }
         }
 
+        public static DataTable tampilkanDataDefault(ref int totalRecords, ref int totalPage, ref int currentPage, ref int pageSize)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
+            {
+                try
+                {
+                    conn.Open();
+                    string countQuery = "SELECT COUNT(*) FROM transaksi";
+
+                    MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+
+                    totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                    totalPage = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+                    if (currentPage > totalPage) currentPage = totalPage;
+                    if (currentPage < 1) currentPage = 1;
+
+                    int offset = (currentPage - 1) * pageSize;
+
+                    string query = @"
+                        SELECT 
+                        transaksi.id AS `ID Transaksi`,
+                        transaksi.id_produk AS `ID Produk`,
+                        products.nama_produk AS `Nama Barang`,
+                        transaksi.id_user AS `ID User`,
+                        transaksi.tanggal_transaksi AS `Tanggal Transaksi`
+                    FROM 
+                        transaksi
+                    JOIN 
+                        products ON transaksi.id_produk = products.id
+                     ORDER BY 
+                        transaksi.id DESC    
+                    LIMIT @limit OFFSET @offset
+                    ";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@limit", pageSize);
+                    cmd.Parameters.AddWithValue("@offset", offset);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Gagal mengambil data " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return new DataTable();
+                }
+            }
+        }
+
     }
 }

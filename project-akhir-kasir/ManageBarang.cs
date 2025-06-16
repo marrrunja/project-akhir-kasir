@@ -121,10 +121,7 @@ namespace project_akhir_kasir
         {
 
         }
-        private void FilterData()
-        {
-
-        }
+     
         private void tampilkandataFiltered()
         {
             string kolom = cmbFilter.SelectedItem?.ToString();

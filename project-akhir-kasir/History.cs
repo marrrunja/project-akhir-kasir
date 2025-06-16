@@ -18,10 +18,16 @@ namespace project_akhir_kasir
     public partial class History : Form
     {
         private int selectedId = -1;
+        int pageSize = 7;
+        int currentPage = 1;
+        int totalPage = 1;
+        int totalRecords = 0;
+        bool isFiltered = false;
         public History()
         {
             InitializeComponent();
-            loadData();
+            //loadData();
+            TampilkanDataDefault();
 
         }
         private void loadData()
@@ -41,6 +47,13 @@ namespace project_akhir_kasir
             }
         }
 
+        private void TampilkanDataDefault()
+        {
+            DataTable dt = HistoryPembelian.tampilkanDataDefault(ref totalRecords, ref totalPage, ref currentPage, ref pageSize);
+            dgvTransaksi.DataSource = dt;
+            labelPage.Text = $"Halaman {currentPage} dari {totalPage}";
+        }
+
         private void btnKembali_Click(object sender, EventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
@@ -49,7 +62,12 @@ namespace project_akhir_kasir
 
         private void btnCari_Click(object sender, EventArgs e)
         {
+            currentPage = 1;
+            isFiltered = true;
             FilterData();
+            labelPage.Text = "";
+            btnNext.Enabled = false;
+            btnPrev.Enabled = false;
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
@@ -62,8 +80,8 @@ namespace project_akhir_kasir
             string keyword = txtFilter.Text.Trim();
 
             if (string.IsNullOrEmpty(kolom)) return;
-
             dgvTransaksi.DataSource = HistoryPembelian.FilterTransaksi(kolom, keyword);
+
         }
 
 
@@ -113,15 +131,57 @@ namespace project_akhir_kasir
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
+            currentPage = 1;
+            isFiltered = false;
+            TampilkanDataDefault();
             refreshForm();
-            loadData();
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
+
         }
 
-        private void filterTanggal_ValueChanged(object sender, EventArgs e)
+        private void filterDataWithTanggal()
         {
             string tanggalStr = filterTanggal.Value.ToString("yyyy-MM-dd");
             DataTable dt = HistoryPembelian.FilterTransaksiWithDate(tanggalStr);
             dgvTransaksi.DataSource = dt;
+            
+        }
+
+        private void filterTanggal_ValueChanged(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            totalPage = 1;
+            filterDataWithTanggal();
+            isFiltered = true;
+            labelPage.Text = "";
+            btnNext.Enabled = false;
+            btnPrev.Enabled = false;
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                if (isFiltered) FilterData();
+                else TampilkanDataDefault();
+
+                labelPage.Text = $"Halaman {currentPage} dari {totalPage}";
+
+            }
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if(currentPage < totalPage)
+            {
+                currentPage++;
+                if (isFiltered) FilterData();
+                else TampilkanDataDefault();
+                labelPage.Text = $"Halaman {currentPage} dari {totalPage}";
+            }
         }
     }
 }
