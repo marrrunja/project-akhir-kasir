@@ -121,7 +121,7 @@ namespace project_akhir_kasir
         {
 
         }
-     
+
         private void tampilkandataFiltered()
         {
             string kolom = cmbFilter.SelectedItem?.ToString();
@@ -192,6 +192,16 @@ namespace project_akhir_kasir
         }
 
         private void labelPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -50,6 +50,7 @@
             btnNext = new Button();
             labelPage = new Label();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             panel2 = new Panel();
             panel3 = new Panel();
             panel4 = new Panel();
@@ -57,6 +58,7 @@
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBarang).BeginInit();
             groupBox1.SuspendLayout();
+            panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -68,9 +70,9 @@
             groupBox3.Controls.Add(txtFilter);
             groupBox3.Controls.Add(btnCari);
             groupBox3.Location = new Point(19, 284);
-            groupBox3.Margin = new Padding(1, 1, 1, 1);
+            groupBox3.Margin = new Padding(1);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(1, 1, 1, 1);
+            groupBox3.Padding = new Padding(1);
             groupBox3.Size = new Size(390, 83);
             groupBox3.TabIndex = 23;
             groupBox3.TabStop = false;
@@ -81,7 +83,7 @@
             cmbFilter.FormattingEnabled = true;
             cmbFilter.Items.AddRange(new object[] { "Nama", "Harga", "Stok", "Kode" });
             cmbFilter.Location = new Point(14, 18);
-            cmbFilter.Margin = new Padding(1, 1, 1, 1);
+            cmbFilter.Margin = new Padding(1);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(132, 23);
             cmbFilter.TabIndex = 16;
@@ -90,7 +92,7 @@
             // txtFilter
             // 
             txtFilter.Location = new Point(162, 18);
-            txtFilter.Margin = new Padding(1, 1, 1, 1);
+            txtFilter.Margin = new Padding(1);
             txtFilter.Name = "txtFilter";
             txtFilter.Size = new Size(213, 23);
             txtFilter.TabIndex = 17;
@@ -99,7 +101,7 @@
             // btnCari
             // 
             btnCari.Location = new Point(14, 46);
-            btnCari.Margin = new Padding(1, 1, 1, 1);
+            btnCari.Margin = new Padding(1);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(363, 22);
             btnCari.TabIndex = 18;
@@ -114,9 +116,9 @@
             groupBox2.Controls.Add(btnEdit);
             groupBox2.Controls.Add(btnHapus);
             groupBox2.Location = new Point(19, 203);
-            groupBox2.Margin = new Padding(1, 1, 1, 1);
+            groupBox2.Margin = new Padding(1);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(1, 1, 1, 1);
+            groupBox2.Padding = new Padding(1);
             groupBox2.Size = new Size(390, 68);
             groupBox2.TabIndex = 22;
             groupBox2.TabStop = false;
@@ -125,7 +127,7 @@
             // btnClear
             // 
             btnClear.Location = new Point(295, 26);
-            btnClear.Margin = new Padding(1, 1, 1, 1);
+            btnClear.Margin = new Padding(1);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(82, 22);
             btnClear.TabIndex = 14;
@@ -136,7 +138,7 @@
             // btnSimpan
             // 
             btnSimpan.Location = new Point(10, 26);
-            btnSimpan.Margin = new Padding(1, 1, 1, 1);
+            btnSimpan.Margin = new Padding(1);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(80, 22);
             btnSimpan.TabIndex = 10;
@@ -147,7 +149,7 @@
             // btnEdit
             // 
             btnEdit.Location = new Point(106, 26);
-            btnEdit.Margin = new Padding(1, 1, 1, 1);
+            btnEdit.Margin = new Padding(1);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(80, 22);
             btnEdit.TabIndex = 11;
@@ -158,7 +160,7 @@
             // btnHapus
             // 
             btnHapus.Location = new Point(202, 26);
-            btnHapus.Margin = new Padding(1, 1, 1, 1);
+            btnHapus.Margin = new Padding(1);
             btnHapus.Name = "btnHapus";
             btnHapus.Size = new Size(80, 22);
             btnHapus.TabIndex = 12;
@@ -171,7 +173,7 @@
             dgvBarang.BackgroundColor = Color.AliceBlue;
             dgvBarang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBarang.Location = new Point(17, 21);
-            dgvBarang.Margin = new Padding(1, 1, 1, 1);
+            dgvBarang.Margin = new Padding(1);
             dgvBarang.Name = "dgvBarang";
             dgvBarang.RowHeadersWidth = 82;
             dgvBarang.Size = new Size(479, 294);
@@ -187,9 +189,9 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label4);
             groupBox1.Location = new Point(19, 14);
-            groupBox1.Margin = new Padding(1, 1, 1, 1);
+            groupBox1.Margin = new Padding(1);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(1, 1, 1, 1);
+            groupBox1.Padding = new Padding(1);
             groupBox1.Size = new Size(390, 175);
             groupBox1.TabIndex = 20;
             groupBox1.TabStop = false;
@@ -199,7 +201,7 @@
             // txtStok
             // 
             txtStok.Location = new Point(148, 113);
-            txtStok.Margin = new Padding(1, 1, 1, 1);
+            txtStok.Margin = new Padding(1);
             txtStok.Name = "txtStok";
             txtStok.Size = new Size(192, 23);
             txtStok.TabIndex = 7;
@@ -207,7 +209,7 @@
             // txtHarga
             // 
             txtHarga.Location = new Point(148, 85);
-            txtHarga.Margin = new Padding(1, 1, 1, 1);
+            txtHarga.Margin = new Padding(1);
             txtHarga.Name = "txtHarga";
             txtHarga.Size = new Size(192, 23);
             txtHarga.TabIndex = 6;
@@ -225,7 +227,7 @@
             // txtNamaBarang
             // 
             txtNamaBarang.Location = new Point(148, 56);
-            txtNamaBarang.Margin = new Padding(1, 1, 1, 1);
+            txtNamaBarang.Margin = new Padding(1);
             txtNamaBarang.Name = "txtNamaBarang";
             txtNamaBarang.Size = new Size(192, 23);
             txtNamaBarang.TabIndex = 5;
@@ -252,8 +254,9 @@
             // 
             // btnKembali
             // 
+            btnKembali.Anchor = AnchorStyles.None;
             btnKembali.Location = new Point(16, 8);
-            btnKembali.Margin = new Padding(2, 2, 2, 2);
+            btnKembali.Margin = new Padding(2);
             btnKembali.Name = "btnKembali";
             btnKembali.Size = new Size(133, 21);
             btnKembali.TabIndex = 8;
@@ -265,7 +268,7 @@
             // 
             btnPrev.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPrev.Location = new Point(17, 330);
-            btnPrev.Margin = new Padding(2, 2, 2, 2);
+            btnPrev.Margin = new Padding(2);
             btnPrev.Name = "btnPrev";
             btnPrev.Size = new Size(109, 35);
             btnPrev.TabIndex = 24;
@@ -277,7 +280,7 @@
             // 
             btnNext.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNext.Location = new Point(130, 330);
-            btnNext.Margin = new Padding(2, 2, 2, 2);
+            btnNext.Margin = new Padding(2);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(109, 35);
             btnNext.TabIndex = 25;
@@ -299,14 +302,33 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.DodgerBlue;
-            panel1.Location = new Point(-1, 0);
+            panel1.Controls.Add(textBox1);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1039, 38);
+            panel1.Size = new Size(1085, 40);
             panel1.TabIndex = 26;
+            panel1.Paint += panel1_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.None;
+            textBox1.BackColor = Color.DodgerBlue;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = SystemColors.Window;
+            textBox1.Location = new Point(405, 8);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(185, 25);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "MANAGE BARANG";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.DodgerBlue;
             panel2.Controls.Add(groupBox1);
             panel2.Controls.Add(groupBox2);
@@ -318,12 +340,13 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.None;
             panel3.BackColor = Color.DodgerBlue;
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(btnPrev);
             panel3.Controls.Add(dgvBarang);
             panel3.Controls.Add(btnNext);
-            panel3.Location = new Point(505, 61);
+            panel3.Location = new Point(521, 61);
             panel3.Name = "panel3";
             panel3.Size = new Size(515, 387);
             panel3.TabIndex = 28;
@@ -343,15 +366,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             BackgroundImage = Properties.Resources._8270297;
-            ClientSize = new Size(1035, 519);
+            ClientSize = new Size(1083, 501);
             Controls.Add(panel2);
             Controls.Add(btnKembali);
             Controls.Add(panel1);
             Controls.Add(panel3);
-            Margin = new Padding(1, 1, 1, 1);
+            Margin = new Padding(1);
             Name = "ManageBarang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Barang";
+            WindowState = FormWindowState.Maximized;
             Load += ManageBarang_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
@@ -359,6 +383,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvBarang).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -393,5 +419,6 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
+        private TextBox textBox1;
     }
 }

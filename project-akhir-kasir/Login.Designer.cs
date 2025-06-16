@@ -115,7 +115,7 @@
             panel1.Controls.Add(labelUsername);
             panel1.Controls.Add(textboxUsername);
             panel1.ForeColor = Color.DodgerBlue;
-            panel1.Location = new Point(223, 76);
+            panel1.Location = new Point(336, 61);
             panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
             panel1.Size = new Size(350, 334);
@@ -156,13 +156,14 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources._8270297;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(856, 531);
+            ClientSize = new Size(1083, 501);
             Controls.Add(panel1);
             ForeColor = Color.White;
             Margin = new Padding(2);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Login";
+            WindowState = FormWindowState.Maximized;
             Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
