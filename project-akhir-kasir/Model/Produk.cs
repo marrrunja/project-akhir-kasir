@@ -170,7 +170,7 @@ namespace project_akhir_kasir.Model
 
                     int offset = (currentPage - 1) * pageSize;
 
-                    string query = "SELECT id, id_produk, harga, stok, nama_produk FROM products ORDER BY id DESC LIMIT @limit OFFSET @offset";
+                    string query = "SELECT id, id_produk, harga, stok, nama_produk FROM products ORDER BY id ASC LIMIT @limit OFFSET @offset";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 

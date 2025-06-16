@@ -116,5 +116,12 @@ namespace project_akhir_kasir
             refreshForm();
             loadData();
         }
+
+        private void filterTanggal_ValueChanged(object sender, EventArgs e)
+        {
+            string tanggalStr = filterTanggal.Value.ToString("yyyy-MM-dd");
+            DataTable dt = HistoryPembelian.FilterTransaksiWithDate(tanggalStr);
+            dgvTransaksi.DataSource = dt;
+        }
     }
 }
