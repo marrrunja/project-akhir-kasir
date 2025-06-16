@@ -196,6 +196,9 @@ namespace project_akhir_kasir
 
         }
 
-   
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

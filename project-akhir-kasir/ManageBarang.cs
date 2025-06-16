@@ -169,24 +169,34 @@ namespace project_akhir_kasir
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-     
+
             if (currentPage > 1)
             {
                 currentPage--;
                 if (isFiltered == true) tampilkandataFiltered();
                 else tampilkanDataDefault();
-              
+
             }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(currentPage < totalPage)
+            if (currentPage < totalPage)
             {
                 currentPage++;
                 if (isFiltered) tampilkandataFiltered();
                 else tampilkanDataDefault();
             }
+        }
+
+        private void ManageBarang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

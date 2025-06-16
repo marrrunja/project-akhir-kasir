@@ -1,3 +1,4 @@
+using CrystalDecisions.Windows.Forms;
 using MySql.Data.MySqlClient;
 using project_akhir_kasir.Config;
 namespace project_akhir_kasir
@@ -67,6 +68,16 @@ namespace project_akhir_kasir
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textboxPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
