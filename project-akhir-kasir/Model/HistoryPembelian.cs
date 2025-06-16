@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using Microsoft.VisualBasic.Devices;
+using System.Collections;
 
 namespace project_akhir_kasir.Model
 {
@@ -74,6 +76,45 @@ namespace project_akhir_kasir.Model
             }
         }
 
+        public static DataTable FilterTransaksiWithDate(string date)
+        {
+            string query = @"
+                        SELECT 
+                        transaksi.id AS `ID Transaksi`,
+                        transaksi.id_produk AS `ID Produk`,
+                        products.nama_produk AS `Nama Barang`,
+                        transaksi.id_user AS `ID User`,
+                        transaksi.tanggal_transaksi AS `Tanggal Transaksi`
+                    FROM 
+                        transaksi
+                    JOIN 
+                        products ON transaksi.id_produk = products.id
+                    WHERE 
+                        tanggal_transaksi = @tanggal
+                    ORDER BY 
+                        transaksi.id DESC";
+            using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@tanggal",date);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Gagal mengambil data " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return new DataTable();
+                }
+            }
+
+ 
+            
+        }
         public static (int jumlah, int totalHarga, int harga) GetDetailTransaksi(int idTransaksi)
         {
             using (MySqlConnection conn = new MySqlConnection(Database.ConnStr))
@@ -102,5 +143,6 @@ namespace project_akhir_kasir.Model
                 }
             }
         }
+
     }
 }

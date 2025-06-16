@@ -54,6 +54,7 @@
             label3 = new Label();
             label2 = new Label();
             RefreshBtn = new Button();
+            filterTanggal = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dgvTransaksi).BeginInit();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -61,9 +62,10 @@
             // 
             // btnKembali
             // 
-            btnKembali.Location = new Point(68, 42);
+            btnKembali.Location = new Point(52, 33);
+            btnKembali.Margin = new Padding(2);
             btnKembali.Name = "btnKembali";
-            btnKembali.Size = new Size(150, 46);
+            btnKembali.Size = new Size(115, 36);
             btnKembali.TabIndex = 0;
             btnKembali.Text = "Kembali";
             btnKembali.UseVisualStyleBackColor = true;
@@ -72,10 +74,11 @@
             // dgvTransaksi
             // 
             dgvTransaksi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransaksi.Location = new Point(68, 247);
+            dgvTransaksi.Location = new Point(52, 193);
+            dgvTransaksi.Margin = new Padding(2);
             dgvTransaksi.Name = "dgvTransaksi";
             dgvTransaksi.RowHeadersWidth = 82;
-            dgvTransaksi.Size = new Size(892, 650);
+            dgvTransaksi.Size = new Size(686, 508);
             dgvTransaksi.TabIndex = 1;
             dgvTransaksi.CellClick += dgvTransaksi_CellClick;
             dgvTransaksi.CellContentClick += dgvTransaksi_CellContentClick;
@@ -85,9 +88,11 @@
             groupBox3.Controls.Add(cmbFilter);
             groupBox3.Controls.Add(txtFilter);
             groupBox3.Controls.Add(btnCari);
-            groupBox3.Location = new Point(68, 103);
+            groupBox3.Location = new Point(52, 80);
+            groupBox3.Margin = new Padding(2);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(892, 109);
+            groupBox3.Padding = new Padding(2);
+            groupBox3.Size = new Size(1051, 85);
             groupBox3.TabIndex = 24;
             groupBox3.TabStop = false;
             groupBox3.Text = "Transaksi";
@@ -96,25 +101,28 @@
             // 
             cmbFilter.FormattingEnabled = true;
             cmbFilter.Items.AddRange(new object[] { "ID Transaksi", "Nama Barang", "Tanggal Transaksi" });
-            cmbFilter.Location = new Point(23, 46);
+            cmbFilter.Location = new Point(18, 36);
+            cmbFilter.Margin = new Padding(2);
             cmbFilter.Name = "cmbFilter";
-            cmbFilter.Size = new Size(242, 40);
+            cmbFilter.Size = new Size(187, 33);
             cmbFilter.TabIndex = 16;
             cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
             // 
             // txtFilter
             // 
-            txtFilter.Location = new Point(284, 47);
+            txtFilter.Location = new Point(218, 37);
+            txtFilter.Margin = new Padding(2);
             txtFilter.Name = "txtFilter";
-            txtFilter.Size = new Size(403, 39);
+            txtFilter.Size = new Size(311, 31);
             txtFilter.TabIndex = 17;
             txtFilter.TextChanged += txtFilter_TextChanged;
             // 
             // btnCari
             // 
-            btnCari.Location = new Point(717, 42);
+            btnCari.Location = new Point(552, 33);
+            btnCari.Margin = new Padding(2);
             btnCari.Name = "btnCari";
-            btnCari.Size = new Size(162, 46);
+            btnCari.Size = new Size(125, 36);
             btnCari.TabIndex = 18;
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = true;
@@ -123,9 +131,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 54);
+            label1.Location = new Point(18, 42);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(139, 32);
+            label1.Size = new Size(105, 25);
             label1.TabIndex = 25;
             label1.Text = "ID Transaksi";
             // 
@@ -149,9 +158,11 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(1001, 247);
+            groupBox1.Location = new Point(770, 193);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(681, 475);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(524, 371);
             groupBox1.TabIndex = 26;
             groupBox1.TabStop = false;
             groupBox1.Text = "Detail Transaksi";
@@ -159,176 +170,204 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(274, 321);
+            label17.Location = new Point(211, 251);
+            label17.Margin = new Padding(2, 0, 2, 0);
             label17.Name = "label17";
-            label17.Size = new Size(19, 32);
+            label17.Size = new Size(16, 25);
             label17.TabIndex = 41;
             label17.Text = ":";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(274, 268);
+            label16.Location = new Point(211, 209);
+            label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
-            label16.Size = new Size(19, 32);
+            label16.Size = new Size(16, 25);
             label16.TabIndex = 40;
             label16.Text = ":";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(274, 216);
+            label15.Location = new Point(211, 169);
+            label15.Margin = new Padding(2, 0, 2, 0);
             label15.Name = "label15";
-            label15.Size = new Size(19, 32);
+            label15.Size = new Size(16, 25);
             label15.TabIndex = 39;
             label15.Text = ":";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(274, 163);
+            label14.Location = new Point(211, 127);
+            label14.Margin = new Padding(2, 0, 2, 0);
             label14.Name = "label14";
-            label14.Size = new Size(19, 32);
+            label14.Size = new Size(16, 25);
             label14.TabIndex = 38;
             label14.Text = ":";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(274, 108);
+            label13.Location = new Point(211, 84);
+            label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
-            label13.Size = new Size(19, 32);
+            label13.Size = new Size(16, 25);
             label13.TabIndex = 37;
             label13.Text = ":";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(274, 54);
+            label12.Location = new Point(211, 42);
+            label12.Margin = new Padding(2, 0, 2, 0);
             label12.Name = "label12";
-            label12.Size = new Size(19, 32);
+            label12.Size = new Size(16, 25);
             label12.TabIndex = 36;
             label12.Text = ":";
             // 
             // TotalTxt
             // 
             TotalTxt.AutoSize = true;
-            TotalTxt.Location = new Point(299, 268);
+            TotalTxt.Location = new Point(230, 209);
+            TotalTxt.Margin = new Padding(2, 0, 2, 0);
             TotalTxt.Name = "TotalTxt";
-            TotalTxt.Size = new Size(24, 32);
+            TotalTxt.Size = new Size(19, 25);
             TotalTxt.TabIndex = 35;
             TotalTxt.Text = "-";
             // 
             // JumlahPembelianTxt
             // 
             JumlahPembelianTxt.AutoSize = true;
-            JumlahPembelianTxt.Location = new Point(299, 216);
+            JumlahPembelianTxt.Location = new Point(230, 169);
+            JumlahPembelianTxt.Margin = new Padding(2, 0, 2, 0);
             JumlahPembelianTxt.Name = "JumlahPembelianTxt";
-            JumlahPembelianTxt.Size = new Size(24, 32);
+            JumlahPembelianTxt.Size = new Size(19, 25);
             JumlahPembelianTxt.TabIndex = 34;
             JumlahPembelianTxt.Text = "-";
             // 
             // TanggalTxt
             // 
             TanggalTxt.AutoSize = true;
-            TanggalTxt.Location = new Point(299, 321);
+            TanggalTxt.Location = new Point(230, 251);
+            TanggalTxt.Margin = new Padding(2, 0, 2, 0);
             TanggalTxt.Name = "TanggalTxt";
-            TanggalTxt.Size = new Size(24, 32);
+            TanggalTxt.Size = new Size(19, 25);
             TanggalTxt.TabIndex = 34;
             TanggalTxt.Text = "-";
             // 
             // HargaTxt
             // 
             HargaTxt.AutoSize = true;
-            HargaTxt.Location = new Point(299, 163);
+            HargaTxt.Location = new Point(230, 127);
+            HargaTxt.Margin = new Padding(2, 0, 2, 0);
             HargaTxt.Name = "HargaTxt";
-            HargaTxt.Size = new Size(24, 32);
+            HargaTxt.Size = new Size(19, 25);
             HargaTxt.TabIndex = 33;
             HargaTxt.Text = "-";
             // 
             // NamaTxt
             // 
             NamaTxt.AutoSize = true;
-            NamaTxt.Location = new Point(299, 108);
+            NamaTxt.Location = new Point(230, 84);
+            NamaTxt.Margin = new Padding(2, 0, 2, 0);
             NamaTxt.Name = "NamaTxt";
-            NamaTxt.Size = new Size(24, 32);
+            NamaTxt.Size = new Size(19, 25);
             NamaTxt.TabIndex = 32;
             NamaTxt.Text = "-";
             // 
             // IdTransaksiTxt
             // 
             IdTransaksiTxt.AutoSize = true;
-            IdTransaksiTxt.Location = new Point(299, 54);
+            IdTransaksiTxt.Location = new Point(230, 42);
+            IdTransaksiTxt.Margin = new Padding(2, 0, 2, 0);
             IdTransaksiTxt.Name = "IdTransaksiTxt";
-            IdTransaksiTxt.Size = new Size(24, 32);
+            IdTransaksiTxt.Size = new Size(19, 25);
             IdTransaksiTxt.TabIndex = 31;
             IdTransaksiTxt.Text = "-";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(24, 321);
+            label6.Location = new Point(18, 251);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(198, 32);
+            label6.Size = new Size(148, 25);
             label6.TabIndex = 30;
             label6.Text = "Tanggal Transaksi";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(24, 163);
+            label5.Location = new Point(18, 127);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(158, 32);
+            label5.Size = new Size(120, 25);
             label5.TabIndex = 29;
             label5.Text = "Harga Barang";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 268);
+            label4.Location = new Point(18, 209);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(135, 32);
+            label4.Size = new Size(102, 25);
             label4.TabIndex = 28;
             label4.Text = "Total Harga";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 216);
+            label3.Location = new Point(18, 169);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(208, 32);
+            label3.Size = new Size(153, 25);
             label3.TabIndex = 27;
             label3.Text = "Jumlah Pembelian\r\n";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 108);
+            label2.Location = new Point(18, 84);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(158, 32);
+            label2.Size = new Size(119, 25);
             label2.TabIndex = 26;
             label2.Text = "Nama Barang";
             // 
             // RefreshBtn
             // 
-            RefreshBtn.Location = new Point(279, 42);
+            RefreshBtn.Location = new Point(215, 33);
+            RefreshBtn.Margin = new Padding(2);
             RefreshBtn.Name = "RefreshBtn";
-            RefreshBtn.Size = new Size(155, 46);
+            RefreshBtn.Size = new Size(119, 36);
             RefreshBtn.TabIndex = 27;
             RefreshBtn.Text = "Refresh";
             RefreshBtn.UseVisualStyleBackColor = true;
             RefreshBtn.Click += RefreshBtn_Click;
             // 
+            // filterTanggal
+            // 
+            filterTanggal.Location = new Point(770, 113);
+            filterTanggal.Name = "filterTanggal";
+            filterTanggal.Size = new Size(300, 31);
+            filterTanggal.TabIndex = 19;
+            filterTanggal.ValueChanged += filterTanggal_ValueChanged;
+            // 
             // History
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1715, 968);
+            ClientSize = new Size(1319, 756);
+            Controls.Add(filterTanggal);
             Controls.Add(RefreshBtn);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
             Controls.Add(dgvTransaksi);
             Controls.Add(btnKembali);
+            Margin = new Padding(2);
             Name = "History";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "History Transaksi";
@@ -368,5 +407,6 @@
         private Label label15;
         private Label label14;
         private Button RefreshBtn;
+        private DateTimePicker filterTanggal;
     }
 }
