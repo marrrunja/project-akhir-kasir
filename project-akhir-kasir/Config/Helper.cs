@@ -24,7 +24,6 @@ namespace project_akhir_kasir.Config
                 form.Hide();
                 form2.Show();
             }
-
         }
     }
 }

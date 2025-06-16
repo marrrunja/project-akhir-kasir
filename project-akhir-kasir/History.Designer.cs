@@ -55,6 +55,9 @@
             label2 = new Label();
             RefreshBtn = new Button();
             filterTanggal = new DateTimePicker();
+            btnNext = new Button();
+            btnPrev = new Button();
+            labelPage = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvTransaksi).BeginInit();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -78,7 +81,7 @@
             dgvTransaksi.Margin = new Padding(2);
             dgvTransaksi.Name = "dgvTransaksi";
             dgvTransaksi.RowHeadersWidth = 82;
-            dgvTransaksi.Size = new Size(686, 508);
+            dgvTransaksi.Size = new Size(686, 371);
             dgvTransaksi.TabIndex = 1;
             dgvTransaksi.CellClick += dgvTransaksi_CellClick;
             dgvTransaksi.CellContentClick += dgvTransaksi_CellContentClick;
@@ -356,11 +359,47 @@
             filterTanggal.TabIndex = 19;
             filterTanggal.ValueChanged += filterTanggal_ValueChanged;
             // 
+            // btnNext
+            // 
+            btnNext.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNext.Location = new Point(235, 583);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(156, 59);
+            btnNext.TabIndex = 28;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
+            // btnPrev
+            // 
+            btnPrev.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPrev.Location = new Point(52, 583);
+            btnPrev.Name = "btnPrev";
+            btnPrev.Size = new Size(156, 59);
+            btnPrev.TabIndex = 29;
+            btnPrev.Text = "Prev";
+            btnPrev.UseVisualStyleBackColor = true;
+            btnPrev.Click += btnPrev_Click;
+            // 
+            // labelPage
+            // 
+            labelPage.AutoSize = true;
+            labelPage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPage.Location = new Point(511, 604);
+            labelPage.Margin = new Padding(2, 0, 2, 0);
+            labelPage.Name = "labelPage";
+            labelPage.Size = new Size(195, 32);
+            labelPage.TabIndex = 30;
+            labelPage.Text = "Halaman 1 dari 2";
+            // 
             // History
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1319, 756);
+            Controls.Add(labelPage);
+            Controls.Add(btnPrev);
+            Controls.Add(btnNext);
             Controls.Add(filterTanggal);
             Controls.Add(RefreshBtn);
             Controls.Add(groupBox1);
@@ -377,6 +416,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -408,5 +448,8 @@
         private Label label14;
         private Button RefreshBtn;
         private DateTimePicker filterTanggal;
+        private Button btnNext;
+        private Button btnPrev;
+        private Label labelPage;
     }
 }

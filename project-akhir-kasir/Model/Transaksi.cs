@@ -30,7 +30,6 @@ namespace project_akhir_kasir.Model
                 cmdDetail.Parameters.AddWithValue("@jumlah", jumlah);
                 cmdDetail.Parameters.AddWithValue("@total", total);
                 cmdDetail.Parameters.AddWithValue("@id_transaksi", idTransaksi);
-
                 return cmdDetail.ExecuteNonQuery();
             }
         }
