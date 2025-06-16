@@ -145,7 +145,7 @@ namespace project_akhir_kasir
             string tanggalStr = filterTanggal.Value.ToString("yyyy-MM-dd");
             DataTable dt = HistoryPembelian.FilterTransaksiWithDate(tanggalStr);
             dgvTransaksi.DataSource = dt;
-            
+
         }
 
         private void filterTanggal_ValueChanged(object sender, EventArgs e)
@@ -175,13 +175,33 @@ namespace project_akhir_kasir
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(currentPage < totalPage)
+            if (currentPage < totalPage)
             {
                 currentPage++;
                 if (isFiltered) FilterData();
                 else TampilkanDataDefault();
                 labelPage.Text = $"Halaman {currentPage} dari {totalPage}";
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void History_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
