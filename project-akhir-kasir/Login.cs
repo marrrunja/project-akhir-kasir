@@ -37,24 +37,25 @@ namespace project_akhir_kasir
                         MessageBox.Show("Username atau password salah ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Gagal terhubung ke database " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
-          }
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = textboxUsername.Text;
             string password = textboxPassword.Text;
 
-           
 
-            if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+
+            if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Username atau password tidak boleh kosong ", "Validasi",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username atau password tidak boleh kosong ", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (HandeLogin(username, password))
@@ -63,6 +64,11 @@ namespace project_akhir_kasir
                 this.Hide();
                 mainMenu.Show();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

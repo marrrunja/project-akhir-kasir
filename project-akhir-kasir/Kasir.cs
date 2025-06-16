@@ -190,5 +190,12 @@ namespace project_akhir_kasir
         {
             clearInput();
         }
+
+        private void FormKasir_Load(object sender, EventArgs e)
+        {
+
+        }
+
+   
     }
 }
