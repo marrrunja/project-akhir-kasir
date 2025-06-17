@@ -44,10 +44,10 @@
             // 
             KasirBtn.Anchor = AnchorStyles.None;
             KasirBtn.Cursor = Cursors.Hand;
-            KasirBtn.Location = new Point(251, 164);
-            KasirBtn.Margin = new Padding(1);
+            KasirBtn.Location = new Point(359, 273);
+            KasirBtn.Margin = new Padding(1, 2, 1, 2);
             KasirBtn.Name = "KasirBtn";
-            KasirBtn.Size = new Size(167, 60);
+            KasirBtn.Size = new Size(239, 100);
             KasirBtn.TabIndex = 0;
             KasirBtn.Text = "Kasir";
             KasirBtn.UseVisualStyleBackColor = true;
@@ -57,10 +57,10 @@
             // 
             ManageBarangBtn.Anchor = AnchorStyles.None;
             ManageBarangBtn.Cursor = Cursors.Hand;
-            ManageBarangBtn.Location = new Point(458, 164);
-            ManageBarangBtn.Margin = new Padding(1);
+            ManageBarangBtn.Location = new Point(654, 273);
+            ManageBarangBtn.Margin = new Padding(1, 2, 1, 2);
             ManageBarangBtn.Name = "ManageBarangBtn";
-            ManageBarangBtn.Size = new Size(167, 60);
+            ManageBarangBtn.Size = new Size(239, 100);
             ManageBarangBtn.TabIndex = 1;
             ManageBarangBtn.Text = "Manage Barang";
             ManageBarangBtn.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // 
             HistoryBtn.Anchor = AnchorStyles.None;
             HistoryBtn.Cursor = Cursors.Hand;
-            HistoryBtn.Location = new Point(660, 164);
-            HistoryBtn.Margin = new Padding(1);
+            HistoryBtn.Location = new Point(943, 273);
+            HistoryBtn.Margin = new Padding(1, 2, 1, 2);
             HistoryBtn.Name = "HistoryBtn";
-            HistoryBtn.Size = new Size(167, 60);
+            HistoryBtn.Size = new Size(239, 100);
             HistoryBtn.TabIndex = 2;
             HistoryBtn.Text = "History Transaksi";
             HistoryBtn.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
             panel1.BackgroundImageLayout = ImageLayout.None;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(145, 58);
-            panel1.Margin = new Padding(1);
+            panel1.Location = new Point(207, 97);
+            panel1.Margin = new Padding(1, 2, 1, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(792, 57);
+            panel1.Size = new Size(1131, 95);
             panel1.TabIndex = 3;
             // 
             // label2
@@ -101,10 +101,10 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaption;
             label2.Image = Properties.Resources.download;
-            label2.Location = new Point(569, 16);
+            label2.Location = new Point(813, 27);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(0, 21);
+            label2.Size = new Size(0, 32);
             label2.TabIndex = 1;
             // 
             // label1
@@ -113,10 +113,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.AliceBlue;
-            label1.Location = new Point(350, 16);
+            label1.Location = new Point(500, 27);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(145, 25);
+            label1.Size = new Size(213, 38);
             label1.TabIndex = 0;
             label1.Text = "Dashboard";
             // 
@@ -126,10 +126,10 @@
             panel2.BackColor = Color.DodgerBlue;
             panel2.BackgroundImageLayout = ImageLayout.None;
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(224, 139);
-            panel2.Margin = new Padding(1);
+            panel2.Location = new Point(320, 232);
+            panel2.Margin = new Padding(1, 2, 1, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(640, 114);
+            panel2.Size = new Size(914, 190);
             panel2.TabIndex = 4;
             // 
             // label3
@@ -141,24 +141,24 @@
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ActiveCaption;
             label3.Image = Properties.Resources.download;
-            label3.Location = new Point(789, 23);
+            label3.Location = new Point(1127, 38);
             label3.Margin = new Padding(1, 0, 1, 0);
             label3.Name = "label3";
-            label3.Size = new Size(0, 21);
+            label3.Size = new Size(0, 32);
             label3.TabIndex = 1;
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources._8270297;
-            ClientSize = new Size(1083, 501);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(1547, 835);
             Controls.Add(panel1);
             Controls.Add(HistoryBtn);
             Controls.Add(ManageBarangBtn);
             Controls.Add(KasirBtn);
             Controls.Add(panel2);
-            Margin = new Padding(1);
+            Margin = new Padding(1, 2, 1, 2);
             Name = "MainMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Utama";
