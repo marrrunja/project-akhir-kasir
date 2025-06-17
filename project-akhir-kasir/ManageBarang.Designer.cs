@@ -54,6 +54,7 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panel4 = new Panel();
+            panel5 = new Panel();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBarang).BeginInit();
@@ -360,22 +361,30 @@
             panel4.Size = new Size(140, 29);
             panel4.TabIndex = 26;
             // 
+            // panel5
+            // 
+            panel5.Anchor = AnchorStyles.None;
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Location = new Point(0, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1083, 500);
+            panel5.TabIndex = 29;
+            // 
             // ManageBarang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDark;
-            BackgroundImage = Properties.Resources._8270297;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1083, 501);
             Controls.Add(panel2);
             Controls.Add(btnKembali);
             Controls.Add(panel1);
             Controls.Add(panel3);
+            Controls.Add(panel5);
             Margin = new Padding(1);
             Name = "ManageBarang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Barang";
-            WindowState = FormWindowState.Maximized;
             Load += ManageBarang_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
@@ -420,5 +429,6 @@
         private Panel panel3;
         private Panel panel4;
         private TextBox textBox1;
+        private Panel panel5;
     }
 }

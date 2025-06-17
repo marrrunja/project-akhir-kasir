@@ -8,8 +8,7 @@ namespace project_akhir_kasir
         public Login()
         {
             InitializeComponent();
-            textboxUsername.Text = "muammar";
-            textboxPassword.Text = "123";
+           
         }
 
         private bool HandeLogin(string username, string password)
@@ -74,10 +73,15 @@ namespace project_akhir_kasir
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textboxPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -88,7 +88,8 @@ namespace project_akhir_kasir
             {
                 MessageBox.Show("Berhasil Update produk", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearForm();
-                loadData();
+                //loadData();
+                tampilkanDataDefault();
             }
         }
 
@@ -102,7 +103,7 @@ namespace project_akhir_kasir
             if (Produk.hapusData(selectedId) > 0)
             {
                 MessageBox.Show("Data produk berhasil dihapus.");
-                loadData();
+                tampilkanDataDefault();
                 clearForm();
             }
         }

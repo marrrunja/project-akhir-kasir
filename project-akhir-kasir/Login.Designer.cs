@@ -43,6 +43,7 @@
             // 
             btnLogin.Anchor = AnchorStyles.None;
             btnLogin.BackColor = Color.RoyalBlue;
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(98, 266);
@@ -58,7 +59,7 @@
             // 
             textboxPassword.Anchor = AnchorStyles.None;
             textboxPassword.BackColor = Color.LightBlue;
-            textboxPassword.ForeColor = Color.White;
+            textboxPassword.ForeColor = Color.Black;
             textboxPassword.Location = new Point(24, 165);
             textboxPassword.Margin = new Padding(2);
             textboxPassword.Name = "textboxPassword";
@@ -70,13 +71,14 @@
             // 
             textboxUsername.Anchor = AnchorStyles.None;
             textboxUsername.BackColor = Color.LightBlue;
-            textboxUsername.ForeColor = Color.White;
+            textboxUsername.ForeColor = Color.Black;
             textboxUsername.Location = new Point(24, 95);
             textboxUsername.Margin = new Padding(2);
             textboxUsername.Name = "textboxUsername";
             textboxUsername.Size = new Size(300, 42);
             textboxUsername.TabIndex = 4;
             textboxUsername.Text = "";
+            textboxUsername.TextChanged += textboxUsername_TextChanged;
             // 
             // labelUsername
             // 
@@ -163,7 +165,6 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Login";
-            WindowState = FormWindowState.Maximized;
             Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

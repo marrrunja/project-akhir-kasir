@@ -47,9 +47,9 @@
             label4 = new Label();
             btnBack = new Button();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             panel2 = new Panel();
             panel3 = new Panel();
-            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)QtyNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBarangBeli).BeginInit();
             GroupBoxPembelian.SuspendLayout();
@@ -299,7 +299,7 @@
             btnBack.FlatStyle = FlatStyle.System;
             btnBack.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.AliceBlue;
-            btnBack.Location = new Point(16, 8);
+            btnBack.Location = new Point(15, 8);
             btnBack.Margin = new Padding(2);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(133, 21);
@@ -317,9 +317,22 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1085, 40);
+            panel1.Size = new Size(1083, 40);
             panel1.TabIndex = 12;
             panel1.Paint += panel1_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.DodgerBlue;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.AliceBlue;
+            textBox1.Location = new Point(400, 8);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(214, 25);
+            textBox1.TabIndex = 12;
+            textBox1.Text = "KASIR";
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -344,24 +357,11 @@
             panel3.Size = new Size(431, 412);
             panel3.TabIndex = 14;
             // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.DodgerBlue;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.AliceBlue;
-            textBox1.Location = new Point(400, 8);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 25);
-            textBox1.TabIndex = 12;
-            textBox1.Text = "KASIR";
-            textBox1.TextAlign = HorizontalAlignment.Center;
-            // 
             // FormKasir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources._8270297;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1083, 501);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -370,7 +370,6 @@
             Name = "FormKasir";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kasir";
-            WindowState = FormWindowState.Maximized;
             Load += FormKasir_Load;
             ((System.ComponentModel.ISupportInitialize)QtyNumeric).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvBarangBeli).EndInit();
